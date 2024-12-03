@@ -1,5 +1,7 @@
 # Lista de Funciones que tengo que hacer
 
+- [ ] Test global para todas las funciones
+
 ## Libc
 - [ ] isalpha
 - [ ] isdigit
