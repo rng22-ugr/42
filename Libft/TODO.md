@@ -3,12 +3,11 @@
 - [ ] Test global para todas las funciones
 
 ## Libc
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
-- [ ] strlen
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [x] isascii
+- [x] strlen
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
@@ -45,4 +44,3 @@
 - [ ] ft_lstadd_back
 - [ ] ft_lstdeslone
 - [ ] ft_lstmap
-- [ ] 
