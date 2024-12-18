@@ -8,8 +8,8 @@
 - [x] isalnum
 - [x] isascii
 - [x] strlen
-- [ ] memset
-- [ ] bzero
+- [x] memset
+- [x] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy

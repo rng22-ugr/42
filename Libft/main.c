@@ -105,10 +105,38 @@ int isstrlen(const char* s)
     return (len);
 }
 
-void *memset(void *s, int c, size_t n);                                                │ 12 - [ ] bzero
+void *memset(void *s, int c, size_t n)
 {
-    return (s);
+    :
+    unsigned char *ptr = s;
+    size_t i;
+    i = 0;
+    while (i < n)
+    {
+        if (ptr[i] == '\0')
+        {
+            break;
+        }
+        else
+        {
+            ptr[i] = (unsigned char)c;
+            i = i + 1;
+        }
+    }
+    return (ptr);
 }
 
+void bzero(void *s, size_t n)
+{
+    char *ptr = s;
+    size_t i;
+
+    i = 0;
+    while (i < n)
+    {
+        ptr[i] = '\0';
+        i = i + 1;
+    }
+}
 
 

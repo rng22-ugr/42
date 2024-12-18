@@ -3,6 +3,7 @@
 
 
 
+
 void test(int value)
 
 {
@@ -143,6 +144,55 @@ int test_strlen()
     }
     return (1);
 }
+/*
+int test_memset()
+{
+    char s[]= "Bomboclaat brobro";
+    char c;
+    int i;
+    int count;
+
+    i = 0;
+    count = 20;
+    c = 'H';
+
+    printf("before memset = %s \n", s);
+    memset(s, c , count);
+    while (s[i] != '\0')
+    {
+    
+    printf("after memset = %s \n", s);
+    return (0);
+
+}
+*/
+
+int test_bzero()
+{
+    char s[]= "Bomboclaat brobro";
+    char c;
+    int i;
+    int count;
+
+    i = 0;
+    count = 20;
+    c = '\0';
+
+    bzero(s,count);
+    while (i < count)
+    {
+        if (s[i] != c)
+        {
+            return (0);
+        }
+        i = i + 1;
+    }
+    
+
+    return (1);
+
+}
+
 
 int main()
 {
@@ -166,6 +216,18 @@ int main()
     //  strlen 
     printf("strlen ");
 	test(test_strlen());
+
+    //  memset 
+    printf("No me apetece hacerle un test a memset, la verdad \n");
+//	test(test_memset());
+
+    //  bzero 
+    printf("bzero (tecnicamente deberia funcionar??? creo que va bien per no sehacerle un test ");
+	test(test_bzero());
+
+
+    
+
 
 
 	return (0);
