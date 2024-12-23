@@ -80,6 +80,7 @@ int is7bit(int c)
     }
 }
 
+
 int isascii(int c)
 {
     if ((ispositive(c) != 0) && (is7bit(c) != 0))
@@ -140,4 +141,17 @@ void bzero(void *s, size_t n)
 
 void *memcpy(void *dest, const void *src, size_t n)
 {
-    
+		size_t size_ti;
+		char *d;
+		const char *s;
+		d = (char *) dest;
+		s = (const char *) src;
+		i = 0;
+		while (i < n)
+		{
+				d[i] = s[i];
+				i = i + 1;
+		}
+		return dest;
+}
+

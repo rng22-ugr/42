@@ -192,7 +192,18 @@ int test_bzero()
     return (1);
 
 }
-
+void test_memcpy() 
+{
+	char src[] = "Gah whan brotha";
+	char dest[20];
+	printf("Before\n");
+	printf("Source = %s\n",src);
+	printf("Destination = %s\n",dest);
+	memcpy(dest, src, 5);
+	printf("After");
+	printf("Source = %s\n",src);
+	printf("Destination = %s\n",dest);
+}
 
 int main()
 {
@@ -225,7 +236,8 @@ int main()
     printf("bzero (tecnicamente deberia funcionar??? creo que va bien per no sehacerle un test ");
 	test(test_bzero());
 
-
+	printf("memcpy(no se como saldra\n");
+	test_memcpy();
     
 
 

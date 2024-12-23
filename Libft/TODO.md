@@ -10,7 +10,7 @@
 - [x] strlen
 - [x] memset
 - [x] bzero
-- [ ] memcpy
+- [x] memcpy
 - [ ] memmove
 - [ ] strlcpy
 - [ ] strlcat
