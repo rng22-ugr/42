@@ -107,7 +107,6 @@ int isstrlen(const char* s)
 
 void *memset(void *s, int c, size_t n)
 {
-    :
     unsigned char *ptr = s;
     size_t i;
     i = 0;
@@ -139,4 +138,6 @@ void bzero(void *s, size_t n)
     }
 }
 
-
+void *memcpy(void *dest, const void *src, size_t n)
+{
+    
