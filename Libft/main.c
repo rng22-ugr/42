@@ -1,4 +1,4 @@
-int isdigit(int c)
+int ft_isdigit(int c)
 {
     int output = 0;
    
@@ -9,7 +9,7 @@ int isdigit(int c)
     return output;
 }
 
-int islower(int c)
+int ft_islower(int c)
 {
     if ((c >= 'a') && (c <= 'z'))
     {
@@ -20,7 +20,7 @@ int islower(int c)
         return (0);
     }
 }
-int isupper(int c)
+int ft_isupper(int c)
 {
     if ((c >= 'A') && (c <= 'Z'))
     {
@@ -32,9 +32,9 @@ int isupper(int c)
     }
 }
 
-int isalpha(int c)
+int ft_isalpha(int c)
 {
-    if (isupper(c) == 1 || islower(c) == 1)
+    if (ft_isupper(c) == 1 || ft_islower(c) == 1)
     {
         return (1);
     }
@@ -44,9 +44,9 @@ int isalpha(int c)
     }
 }
 
-int isalnum(int c)
+int ft_isalnum(int c)
 {
-    if ((isalpha(c) != 0) || (isdigit(c) != 0))
+    if ((ft_isalpha(c) != 0) || (ft_isdigit(c) != 0))
     {
         return (1);
     }
@@ -56,7 +56,7 @@ int isalnum(int c)
     }
 }
 
-int ispositive(int c)
+int ft_ispositive(int c)
 {
     if (c >= 0)
     {
@@ -68,7 +68,7 @@ int ispositive(int c)
     }
 }
 
-int is7bit(int c)
+int ft_is7bit(int c)
 {
     if (c < 128) //128, porque el 0 tambien cuenta!!!!!!
     {
@@ -80,9 +80,9 @@ int is7bit(int c)
     }
 }
 
-int isascii(int c)
+int ft_isascii(int c)
 {
-    if ((ispositive(c) != 0) && (is7bit(c) != 0))
+    if ((ft_ispositive(c) != 0) && (ft_is7bit(c) != 0))
     {
         return (1);
     }
@@ -91,8 +91,7 @@ int isascii(int c)
         return(0);
     }
 }
-
-int isstrlen(const char* s)
+int ft_isstrlen(const char* s)
 {
     int len;
 
@@ -105,7 +104,7 @@ int isstrlen(const char* s)
     return (len);
 }
 
-void *memset(void *s, int c, size_t n)
+void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char *ptr = s;
     size_t i;
@@ -125,7 +124,7 @@ void *memset(void *s, int c, size_t n)
     return (ptr);
 }
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
     char *ptr = s;
     size_t i;
@@ -138,7 +137,7 @@ void bzero(void *s, size_t n)
     }
 }
 
-void *memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     int i;
     
@@ -149,6 +148,12 @@ void *memcpy(void *dest, const void *src, size_t n)
         i = i + 1;
     }
 }
-void *memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
+	size_t i;
+	
+
+	
+
+}
 

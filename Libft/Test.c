@@ -25,7 +25,7 @@ int test_isdigit()
 
 	while (i < '0')         //Debe ser menor que '0' para que no de error en '0'!!!!!
 	{
-		if (isdigit(i) != 0)
+		if (ft_isdigit(i) != 0)
 		{
 			return (0);
 		}
@@ -33,7 +33,7 @@ int test_isdigit()
 	}
 	while (i <= '9')
 	{
-		if (isdigit(i) != 0)
+		if (ft_isdigit(i) != 0)
 		{
             i = i+1;
 		}
@@ -52,7 +52,7 @@ int test_isalpha()
     
     while (i < 'A')
     {
-        if (isalpha(i) != 0)
+        if (ft_isalpha(i) != 0)
         {
             return (0);
         }
@@ -60,7 +60,7 @@ int test_isalpha()
     }
     while (i <='Z')
     {
-        if (isalpha(i) == 0)
+        if (ft_isalpha(i) == 0)
         {
             return (0);
         }
@@ -69,7 +69,7 @@ int test_isalpha()
  
     while (i < 'a')
     {
-        if (isalpha(i) != 0)
+        if (ft_isalpha(i) != 0)
         {
             return (0);
         }
@@ -78,7 +78,7 @@ int test_isalpha()
  
     while (i <='z')
     {
-        if (isalpha(i) == 0)
+        if (ft_isalpha(i) == 0)
         {
             return (0);
         }
@@ -107,7 +107,7 @@ int test_isascii()
     //Números negativos
     while (c < 0)
     {
-        if (isascii(c) != 0)
+        if (ft_isascii(c) != 0)
         {
             return (0);
         }
@@ -116,7 +116,7 @@ int test_isascii()
     // Hasta 128
     while (c < 128)
     {
-         if (isascii(c) == 0)
+         if (ft_isascii(c) == 0)
         {
             return (0);
         }
@@ -134,7 +134,7 @@ int test_strlen()
     str[0] = '\0';
     while (i < 100)
     {
-        if (isstrlen(str) != i)
+        if (ft_isstrlen(str) != i)
         {
             return (0);
         }
@@ -178,7 +178,7 @@ int test_bzero()
     count = 20;
     c = '\0';
 
-    bzero(s,count);
+    ft_bzero(s,count);
     while (i < count)
     {
         if (s[i] != c)
@@ -199,7 +199,7 @@ void test_memcpy()
 	printf("Before\n");
 	printf("Source = %s\n",src);
 	printf("Destination = %s\n",dest);
-	memcpy(dest, src, 5);
+	ft_memcpy(dest, src, 5);
 	printf("After");
 	printf("Source = %s\n",src);
 	printf("Destination = %s\n",dest);
