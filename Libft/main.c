@@ -140,20 +140,40 @@ void ft_bzero(void *s, size_t n)
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     int i;
+    char *d;
+    char *s;
     
+    d = dest;
+    s = src;
     i = 0;
     while (i < n)
     {
-        dest[i] = src[i];
+        d[i] = s[i];
         i = i + 1;
     }
 }
+
+/*
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t i;
-	
+	char *d = dest;
+	char *s = src;
+	char *temp;
+	temp = (char*) malloc((n + 1)*sizeof(char));
+	i = 0;
 
-	
-
+	while (i < n)
+	{
+		temp[i] = s[i];
+		i = i + 1;
+	}
+	i = 0;
+	while (i < n)
+	{
+		d[i] = temp[i];
+	}
+	return (dest);
 }
+*/
 

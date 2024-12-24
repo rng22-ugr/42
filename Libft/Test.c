@@ -204,7 +204,6 @@ void test_memcpy()
 	printf("Source = %s\n",src);
 	printf("Destination = %s\n",dest);
 }
-
 int main()
 {
 
@@ -236,9 +235,14 @@ int main()
     printf("bzero (tecnicamente deberia funcionar??? creo que va bien per no sehacerle un test ");
 	test(test_bzero());
 
+	//memcpy
 	printf("memcpy(no se como saldra\n");
 	test_memcpy();
     
+	//memmove, a partir de aqui ya nunca tengo ni idea de lo que estoy haciendo 
+	//printf("memmove(He perdido toda la fe en mi mismo, ayuda\n");
+	//test_memmove();
+
 
 
 
