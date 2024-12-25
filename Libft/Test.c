@@ -204,6 +204,20 @@ void test_memcpy()
 	printf("Source = %s\n",src);
 	printf("Destination = %s\n",dest);
 }
+void test_memmove() 
+{
+	char src[] = "Gah whan brotha";
+	char dest[20];
+	printf("Before\n");
+	printf("Source = %s\n",src);
+	printf("Destination = %s\n",dest);
+	ft_memmove(dest, src, 5);
+	printf("After");
+	printf("Source = %s\n",src);
+	printf("Destination = %s\n",dest);
+}
+
+
 int main()
 {
 
@@ -240,8 +254,8 @@ int main()
 	test_memcpy();
     
 	//memmove, a partir de aqui ya nunca tengo ni idea de lo que estoy haciendo 
-	//printf("memmove(He perdido toda la fe en mi mismo, ayuda\n");
-	//test_memmove();
+	printf("memmove(He perdido toda la fe en mi mismo, ayuda\n");
+	test_memmove();
 
 
 
