@@ -6,9 +6,13 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 21:06:12 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/26 21:07:20 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/26 21:38:07 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
-
+int	ft_isprint(int c)
+{
+	if ((c >= 32) && (c <= 126))
+		return (1);
+	return (0);
+}

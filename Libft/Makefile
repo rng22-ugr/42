@@ -6,7 +6,7 @@
 #    By: dapachec <dapachec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 20:25:44 by dapachec          #+#    #+#              #
-#    Updated: 2024/12/26 20:53:42 by ranavarr         ###   ########.fr        #
+#    Updated: 2024/12/26 21:52:01 by ranavarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ Sources = ft_isdigit.c\
 	ft_isalpha.c\
 	ft_isalnum.c\
 	ft_isascii.c\
+	ft_isprint.c\
+	ft_strlen.c\
 
 OBJ = $(Sources:.c=.o)
 

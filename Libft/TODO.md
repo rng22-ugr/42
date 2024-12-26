@@ -8,7 +8,7 @@
 - [x] isdigit
 - [x] isalnum
 - [x] isascii
-- [ ] isprint
+- [x] isprint
 - [ ] strlen
 - [ ] memset
 - [ ] bzero
