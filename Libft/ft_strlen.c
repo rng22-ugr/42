@@ -3,21 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 21:39:36 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/26 21:49:29 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/27 00:51:55 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(const char *s)
 {
-	size_t	len;
+	int	len;
 
 	len = 0;
-	while (s[len] != '\n' )
-	{
+	while (s[len])
 		len++;
-	}
 	return (len);
 }
