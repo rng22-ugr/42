@@ -178,7 +178,16 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-char* strcpy(char* destination, const char* source);
+
+strlcpy(char *dst, const char *src, size_t size)
 {
-	
+size_t i;
+i = 0;
+while(i<size || src[i] != '\n')
+{
+dst[i] = src[i];
+i = i + 1;
+}
+dst[i] = '\n';
+return(dst);
 }
