@@ -1,5 +1,6 @@
 # Lista de Funciones que tengo que hacer
 
+
 - [ ] Test global para todas las funciones
 
 ## Libc
@@ -7,11 +8,12 @@
 - [x] isdigit
 - [x] isalnum
 - [x] isascii
-- [x] strlen
-- [x] memset
-- [x] bzero
-- [x] memcpy
-- [x] memmove
+- [ ] isprint
+- [ ] strlen
+- [ ] memset
+- [ ] bzero
+- [ ] memcpy
+- [ ] memmove
 - [ ] strlcpy
 - [ ] strlcat
 - [ ] toupper
