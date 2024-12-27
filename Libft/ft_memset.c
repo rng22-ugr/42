@@ -6,15 +6,18 @@
 /*   By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 00:00:12 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/27 00:51:29 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:52:45 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	char			*str;
-	unsigned int	i;
+	size_t			i;
 
+	i = 0;
 	str = (char *) s;
 	while (i < n)
 	{

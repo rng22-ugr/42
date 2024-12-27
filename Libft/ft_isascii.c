@@ -6,13 +6,13 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 20:22:14 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/26 21:05:54 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:58:27 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned	int c)
+int	ft_isascii(int c)
 {
-	if (c > 127)
-		return (0);
-	return (1);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

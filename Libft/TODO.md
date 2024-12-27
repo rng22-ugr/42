@@ -23,9 +23,10 @@
 - [x] strnmp
 - [x] memchr
 - [x] strnstr
-- [ ] atoi
-- [ ] calloc
+- [x] atoi
+ [ ] calloc
 - [ ] strdup
+
 ## Fuera de libc
 - [ ] ft_substr
 - [ ] ft_strjoin
@@ -37,12 +38,3 @@
 - [ ] ft_putchar_fd
 - [ ] ft_putendl_fd
 - [ ] ft_putnbr_fd
-
-## Bonus
-- [ ] ft_lstnew
-- [ ] ft_lstadd_front
-- [ ] ft_lstsize
-- [ ] ft_lstlast
-- [ ] ft_lstadd_back
-- [ ] ft_lstdeslone
-- [ ] ft_lstmap

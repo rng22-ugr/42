@@ -6,7 +6,7 @@
 #    By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 20:25:44 by dapachec          #+#    #+#              #
-#    Updated: 2024/12/27 15:20:35 by ranavarr         ###   ########.fr        #
+#    Updated: 2024/12/27 17:42:07 by ranavarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ Sources = ft_isdigit.c\
 	ft_strncmp.c\
 	ft_memchr.c\
 	ft_strnstr.c\
+	ft_atoi.c\
 
 OBJ = $(Sources:.c=.o)
 

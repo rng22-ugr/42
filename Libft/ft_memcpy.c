@@ -6,11 +6,13 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 01:07:06 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/27 04:46:24 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:49:52 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 	char			*d;
