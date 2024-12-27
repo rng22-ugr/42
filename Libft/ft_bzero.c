@@ -6,17 +6,19 @@
 /*   By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 00:45:03 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/27 00:51:31 by ranavarr         ###   ########.fr       */
+/*   Updated: 2024/12/27 01:04:26 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, unsigned int n)
 {
-    size_t i;
+	unsigned int	i;
+	char			*ptr;
 
-    while(i < n)
-    {
-        s[i] = '\0';
-        i++;
-    }
+	ptr = (char *) s;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 }

@@ -11,10 +11,10 @@
 - [x] isprint
 - [x] strlen
 - [x] memset
-- [ ] bzero
-- [ ] memcpy
-- [ ] memmove
-- [ ] strlcpy
+- [x] bzero
+- [x] memcpy
+- [x] memmove
+- [x] strlcpy
 - [ ] strlcat
 - [ ] toupper
 - [ ] tolower
