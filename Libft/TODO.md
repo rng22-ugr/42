@@ -20,9 +20,9 @@
 - [x] tolower
 - [x] strchr
 - [x] strrchr
-- [ ] strnmp
-- [ ] memchr
-- [ ] strnstr
+- [x] strnmp
+- [x] memchr
+- [x] strnstr
 - [ ] atoi
 - [ ] calloc
 - [ ] strdup
