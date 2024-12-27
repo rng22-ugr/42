@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 07:33:06 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/27 07:40:46 by ranavarr         ###   ########.fr       */
+/*   Created: 2024/12/27 07:46:22 by ranavarr          #+#    #+#             */
+/*   Updated: 2024/12/27 07:58:52 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+char	*strchr(const char *s, int c)
 {
-	if ((c >= 'a') && (c <= 'z'))
-		c = c - 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return (char *)&s[i];
+		i++;
+	}
+	if (c == '\0')
+		return (char *)&s[i];
+	return (0);
 }
+

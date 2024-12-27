@@ -15,11 +15,11 @@
 - [x] memcpy
 - [x] memmove
 - [x] strlcpy
-- [ ] strlcat
-- [ ] toupper
-- [ ] tolower
-- [ ] strchr
-- [ ] strrchr
+- [x] strlcat
+- [x] toupper
+- [x] tolower
+- [x] strchr
+- [x] strrchr
 - [ ] strnmp
 - [ ] memchr
 - [ ] strnstr
