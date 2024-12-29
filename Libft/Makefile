@@ -32,6 +32,8 @@ Sources = ft_isdigit.c\
 	ft_memchr.c\
 	ft_strnstr.c\
 	ft_atoi.c\
+	ft_calloc.c\
+	ft_strdup.c
 
 OBJ = $(Sources:.c=.o)
 
