@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:05:38 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/02/21 12:42:02 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/02/21 13:52:53 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 69 
+#  define BUFFER_SIZE 2
 # endif
 
 # include <limits.h>
@@ -26,6 +26,5 @@
 
 
 char	*get_next_line(int fd);
-void	*realloc(void *memblock, size_t size);
 
 #endif
