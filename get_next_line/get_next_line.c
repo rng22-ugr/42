@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+	/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
@@ -11,56 +11,36 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/* POSIBLE BASURA char	*get_next_line(int fd)
- *
- *
-{
-	static char	*buffer;
-	char		*line;
-	int			i;
 
+ssize_t hasnewline(char *buffer)
+{
+	int	i;
+	
 	i = 0;
-	line = (char *) malloc(BUFFER_SIZE);
-	while (i < BUFFER_SIZE)
+	while (buffer[i])
 	{
-		if (*buffer == '\n' || *buffer == '\0' )
+		if (buffer[i] == '\n')
 		{
-
+			return (i);
 		}
+		i++;
 	}
-	return (line);
+	return (-1);
 }
-
-int	main(void)
-{
-	int		fd;
-	char	*p;
-
-	fd = open("get_next_line.c", O_RDONLY);
-	p = "a";
-	while (p != NULL)
-	{
-		p = get_next_line(fd);
-		printf("%s", p);
-
-		free(p);
-	}
-	p = get_next_line(fd);
-	return (0);
-}
-*/
 
 char	*reader(int fd, char *buffer)
 {
 	char		*temp;
 	ssize_t		size;
 
-
 		
 	temp = malloc((BUFFER_SIZE + 1) * sizeof(char));
+	while (hasnewline(buffer) == -1 )
+	{
 	size = read(fd, temp, BUFFER_SIZE);
 	printf("esto es temp %s \n", temp);
 	return (buffer);
+	}
 }
 
 int main(void)
