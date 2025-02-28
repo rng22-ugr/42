@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 18:05:38 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/02/21 14:05:22 by ranavarr         ###   ########.fr       */
+/*   Created: 2025/02/28 00:42:05 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/02/28 00:42:19 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
@@ -24,7 +25,6 @@
 # include <unistd.h>
 # include <fcntl.h>
 
-
-char	*get_next_line(int fd);
+//char	*get_next_line(int fd);
 
 #endif
