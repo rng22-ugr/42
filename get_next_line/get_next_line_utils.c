@@ -1,21 +1,110 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 18:14:43 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/02/21 12:41:53 by ranavarr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	*realloc(void *memblock, size_t size)
-{
 
+int	ft_strlen(const char *s)
+{
+	int	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
 
-int		char_checker(int i, size_t BUFFER_SIZ
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*res;
+	int		i;
+	int		j;
 
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	res = malloc((ft_strlen(s1) + ft_strlen(s2) + 2) * sizeof(char));
+	if (!res)
+		return (NULL);
+	while (s1[i])
+		res[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		res[j++] = s2[i++];
+	res[j] = '\0';
+	free(s1);
+	return (res);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (c == '\0')
+		return ((char *)&s[i]);
+	return (0);
+}
+
+int	mymalloc(void **ptr, int size)
+{
+	*ptr = malloc(size);
+	if (!(*ptr))
+		return (1);
+	else
+		return (0);
+}
+
+char	*extract(char *buf)
+{
+	char	*line;
+	int		i;
+
+	i = 0;
+	if (!buf || buf[0] == '\0')
+		return (NULL);
+	while (buf[i] != '\0')
+		i++;
+	if (mymalloc((void *)&line, sizeof(char) * (i + 2)) == 1)
+		return (NULL);
+	line[i] = '\0';
+	i--;
+	line[i] = '\n';
+	while (i > 0)
+	{
+		i--;
+		line[i] = buf[i];
+	}
+	return (line);
+}
+
+char	*cropper(char *buf, char c)
+	{
+	int		i;
+	int		j;
+	char	*newbuf;
+
+	i = 0;
+	j = 0;
+	if (!buf)
+		return (NULL);
+	while (buf[i] && buf[i] != c)
+		i++;
+	if (mymalloc((void *)&newbuf, (sizeof(char) * ((ft_strlen(buf) - i) + 1))))
+		return (NULL);
+	while (buf[i++])
+	{
+		newbuf[j] = buf[i];
+		j++;
+	}
+	newbuf[j] = '\0';
+	free(buf);
+	return (newbuf);
+}

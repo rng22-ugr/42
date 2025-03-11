@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar Ejecutable",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out",  // Asegúrate de que la ruta al ejecutable sea correcta
+            "args": [],  // Argumentos que quieras pasar al ejecutable
+            "stopAtEntry": false,  // No detenerse en la primera línea del programa
+            "cwd": "${workspaceFolder}",  // Directorio de trabajo
+            "environment": [],  // Variables de entorno (si las necesitas)
+            "externalConsole": true,  // Abrir consola externa
+            "MIMode": "gdb",  // Depurador, ajusta según tu entorno
+            "miDebuggerPath": "/usr/bin/gdb",  // Ruta al depurador
+            "logging": {
+                "moduleLoad": false,
+                "trace": true,
+                "engineLogging": true
+            }
+        }
+    ]
+}

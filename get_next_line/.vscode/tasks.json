@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",  // Nombre de la tarea
+            "type": "shell",
+            "command": "/usr/bin/g++",  // Ruta al compilador, ajusta según tu sistema
+            "args": [
+                "-g",  // Generar información de depuración
+                "${workspaceFolder}/src/main.cpp",  // Ruta al archivo fuente
+                "-o", "${workspaceFolder}/bin/mi_programa"  // Ruta al ejecutable generado
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],  // Buscar problemas de compilación
+            "detail": "Compilación de C++ usando g++"
+        }
+    ]
+}
