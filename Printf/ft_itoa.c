@@ -1,10 +1,12 @@
-#include "libft.h"
+	//#include "libft.h"
+#include <stdlib.h>
 
 static int int_len(long nbr);
 static char *pre_conv(int len);
 
 char *ft_itoa(int n)
 {
+	char *tmp;
     int len;
     int i;
     char *result;
