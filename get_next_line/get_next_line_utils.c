@@ -1,7 +1,6 @@
 
 #include "get_next_line.h"
 
-
 int	ft_strlen(const char *s)
 {
 	int	len;
@@ -18,11 +17,12 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		i;
 	int		j;
 
+
 	i = 0;
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	res = malloc((ft_strlen(s1) + ft_strlen(s2) + 2) * sizeof(char));
+	res = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	while (s1[i])
@@ -31,7 +31,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[i])
 		res[j++] = s2[i++];
 	res[j] = '\0';
-	free(s1);
+	if (s1)
+		free(s1);
 	return (res);
 }
 
@@ -53,15 +54,6 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-int	mymalloc(void **ptr, int size)
-{
-	*ptr = malloc(size);
-	if (!(*ptr))
-		return (1);
-	else
-		return (0);
-}
-
 char	*extract(char *buf)
 {
 	char	*line;
@@ -72,11 +64,10 @@ char	*extract(char *buf)
 		return (NULL);
 	while (buf[i] != '\0')
 		i++;
-	if (mymalloc((void *)&line, sizeof(char) * (i + 2)) == 1)
+	line = malloc(sizeof(char) * (i + i));
+	if (!line)
 		return (NULL);
 	line[i] = '\0';
-	i--;
-	line[i] = '\n';
 	while (i > 0)
 	{
 		i--;
@@ -97,13 +88,11 @@ char	*cropper(char *buf, char c)
 		return (NULL);
 	while (buf[i] && buf[i] != c)
 		i++;
-	if (mymalloc((void *)&newbuf, (sizeof(char) * ((ft_strlen(buf) - i) + 1))))
-		return (NULL);
-	while (buf[i++])
-	{
-		newbuf[j] = buf[i];
-		j++;
-	}
+	newbuf = malloc(sizeof(char) * ((ft_strlen(buf) - i) + 0));
+	if (!newbuf)
+		return NULL;
+	while (buf[i])
+		newbuf[j++] = buf[i++];
 	newbuf[j] = '\0';
 	free(buf);
 	return (newbuf);
