@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:55:25 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/11 16:22:25 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:32:25 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*get_next_line(int fd)
 	line = NULL;
 	aux = NULL;
 	bytes = 1;
+	if (fd < 0)
+		return (NULL);
 	if (!buf)
 	{
 		if (mymalloc((void *)&buf, (sizeof (char))) == 1)
@@ -74,3 +76,4 @@ int	main(void)
 	line = NULL;
 	close(fd);
 }
+
