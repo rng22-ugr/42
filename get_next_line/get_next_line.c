@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/* ****/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
@@ -12,16 +12,56 @@
 
 #include "get_next_line.h"
 
+char *get_next_line(int fd)
+{
+	static char	*buf;
+	char 		*tmp;
+	int			bytes;
+	char		*newline;
+
+	newline = NULL;
+	if (fd < 0)
+		return (NULL);
+	tmp = malloc(sizeof(char) * (BUFFER_SIZE));
+	if (!tmp)
+		return (NULL);
+	if (!buf)
+	{
+		printf("buf no existe todavia \n");
+		buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+		if (!buf)
+			return (NULL);
+		printf("buf ya si  existe  \n");
+	}
+	bytes = read(fd, buf, BUFFER_SIZE);
+	if (bytes < 0)
+		return (NULL);
+//	printf("%s \n", buf);
+	while (!newline)
+	{
+		printf("no se encontro un newline \n");
+		bytes = read(fd, tmp, BUFFER_SIZE);
+		buf = ft_strjoin(buf, tmp);
+		printf("%s \n", buf);
+		newline = ft_strchr(buf, '\n');
+ 	}
+	free(tmp);
+	tmp = NULL;
+	tmp = malloc(sizeof(char) * (newline + 1));
+	strlcpy(tmp, buf, newline);
+	printf("%s \n", buf);
+	return (newline);
+}
+
+/*
 char	*get_next_line(int fd)
 {
-	int			bytes;	
+	int			bytes;
 	char		*aux;
 	static char	*buf;
 	char		*line;
 
-	line = NULL;
-	aux = NULL;
-	bytes = 1;
+	// FD CORRECTO?
 	if (fd < 0)
 		return (NULL);
 	if (!buf)
@@ -29,7 +69,9 @@ char	*get_next_line(int fd)
 		buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 		if (!buf)
 			return (NULL);
-		buf[0] = '\0';
+		bytes = read(fd, buf, BUFFER_SIZE);
+		
+		//buf[0] = '\0';
 	}
 	aux = malloc(sizeof(char) * (BUFFER_SIZE) + 1);
 	if (!aux)
@@ -40,37 +82,29 @@ char	*get_next_line(int fd)
 		if (bytes == -1)
 		{
 			free(aux);
-			free(buf);
 			return (NULL);
 		}
 		if (bytes == 0)
 			break;
 		aux[bytes] = '\0';
-		char *temp = ft_strjoin(buf, aux);
-		if (!temp)
-		{
-		free(aux);
-		free(buf);
-		return (NULL);
-		}
-		buf = temp;
+		aux = ft_strjoin(buf, aux);
+		buf = aux;
 	}
 	line = extract(buf);
 	if (!line)
 	{
-	free(buf);
-	free(aux);
-	return (NULL);
+		free(aux);
+		return (NULL);
 	}
 	buf = cropper(buf, '\n');
 	free(aux);
 	if (!line)
 	{
-		free(buf);
 		buf = NULL;
 	}
 	return (line);
 }
+*/
 
 int	main(void)
 {
@@ -92,4 +126,3 @@ int	main(void)
 	line = NULL;
 	close(fd);
 }
-

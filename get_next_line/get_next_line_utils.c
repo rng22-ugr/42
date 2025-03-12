@@ -54,6 +54,29 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
+int	ft_strlcpy(char *dst, char *src, int size)
+{
+	int		i;
+
+	i = 0;
+	while ((i + 1 < size) && (src[i]))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (size > 0)
+		dst[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
+}
+
+int copy_shift(char *dst, char *src, int size)
+{
+	
+	
+}
+
 char	*extract(char *buf)
 {
 	char	*line;
@@ -62,9 +85,9 @@ char	*extract(char *buf)
 	i = 0;
 	if (!buf || buf[0] == '\0')
 		return (NULL);
-	while (buf[i] != '\0')
+	while (buf[i] != '\n' || buf[i] != '\0')
 		i++;
-	line = malloc(sizeof(char) * (i + i));
+	line = malloc(sizeof(char) * (i + 1));
 	if (!line)
 		return (NULL);
 	line[i] = '\0';
