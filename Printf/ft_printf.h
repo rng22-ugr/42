@@ -28,11 +28,11 @@ int		ft_print_percent(void);
 
 
 //	utils
-int		ft_itoa(int n, char *s);
+char	*ft_itoa(int n, char *s);
 int		ft_abs(int i);
 int		intlen(int i, int len);
 void	ft_puthex_recursive(int n, char *chars);
-int		ft_uitoa(unsigned n, char *s);
+char	*ft_uitoa(unsigned int n, char *s);
 void	ft_puthex_recursive(int n, char *chars);
 int		ft_puthex(int n, char *chars);
 #endif

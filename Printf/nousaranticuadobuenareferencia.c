@@ -17,10 +17,39 @@
 #include <stdio.h>
 #include <stdint.h>
 
+
 int	ft_print_char(char c)
 {
 	write(1, &c, 1);
 	return(1);
+}
+
+int	ft_print_str(char *str)
+{
+	int	i;
+
+	i = 0;
+	while(str[i])
+		i += ft_print_char(str[i]);
+	return (i);
+}
+
+int	ft_int_len(int i)
+{
+	int	len;
+
+	if (i == 0)
+		return (1);
+	len = 0;
+	if (i < 0)
+		len++;
+	while (i)
+	{
+		len++;
+		i /= 10;
+
+	}
+	return (len);
 }
 
 int	ft_print_int(int i)
@@ -28,7 +57,7 @@ int	ft_print_int(int i)
 			char	*str;
 			int		len;
 
-			str = malloc(sizeof(char) * (intlen(i, 0) + 1));
+			str = malloc(sizeof(char) * (ft_int_len(i) + 1));
 			ft_itoa(i, str);
 			len = ft_print_str(str);
 			free(str);
@@ -38,17 +67,7 @@ int	ft_print_int(int i)
 
 int ft_print_percent(void)
 {
-	return (ft_print_char("%"));
-}
-
-int	ft_print_str(char *str)
-{
-	int	i;
-
-	i = 0;
-	while(str[i])
-		i += ft_put_char(str[i]);
-	return (i);
+	return (ft_print_char('%'));
 }
 
  unsigned int	ft_unsigned_len(unsigned i)
@@ -127,16 +146,36 @@ int ft_puthex_long(long unsigned int num)
 	return (i);
 }
 
-char *ft_uitoa(unsigned i, char *str)
+char	*ft_itoa(int i, char *str)
+{
+	int		len;
+
+	len = ft_int_len(i);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (i < 0)
+	{
+		len++;
+		str[0] = '-';
+	}
+	while(i)
+	{
+		str[--len] = ((i % 10) + 48);
+		i /= 10;
+	}
+	return (str);
+}
+
+char *ft_uitoa(unsigned int i, char *str)
 {
 	unsigned int		len;
 
 	len = ft_unsigned_len(i);
-	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str(len) = '\0';
-	while(mod2)
+	str[len] = '\0';
+	while(i)
 	{
 		str[--len] = ((i % 10) + '0');
 		i /= 10;
@@ -184,8 +223,10 @@ int	selector(char	c, va_list args)
 		return (ft_print_int(va_arg(args, int)));
 	else if (c == '%')
 		return (ft_print_percent());
+/*
 	else if (c == 'u')
 		return (ft_print_u(va_arg(args, unsigned)));
+
 	else if (c == 'x')
 		return (ft_puthex(va_arg(args, int), "0123456789abcdef"));
 	else if (c == 'X')
@@ -193,6 +234,7 @@ int	selector(char	c, va_list args)
 	else if (c == 'p')
 		return (ft_print_ptr(va_arg(args, uintptr_t)));
 		else
+*/
 	return(0);
 }
 
@@ -221,7 +263,7 @@ int	ft_printf(char const *str, ...)
 	return (i + j);
 }
 
-/*
+
 int	main (void)
 {
 	char	c[]= "esto es una cadena, no se si lo has visto.";
@@ -241,7 +283,11 @@ int	main (void)
 	ft_printf("probando introducir hexadecimales negativos: %x  \n", -223452);
 	ft_printf("probando introducir punteros: %p  \n", c);
 
-//	printf("probando ft_itoa \n", intlen(1));
+
+	return (0);
+}
+/*
+//	printf("probando ft_itoa \n", ft_int_len(1));
 	printf("itoa %i \n", ft_itoa(2234535, c));
 	printf("%s \n", c);
 
