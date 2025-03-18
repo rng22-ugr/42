@@ -1,4 +1,4 @@
-/* ****/
+		/* ****/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
@@ -12,6 +12,7 @@
 
 #include "get_next_line.h"
 
+/*
 char *get_next_line(int fd)
 {
 	static char	*buf;
@@ -52,8 +53,8 @@ char *get_next_line(int fd)
 	printf("%s \n", buf);
 	return (newline);
 }
+*/
 
-/*
 char	*get_next_line(int fd)
 {
 	int			bytes;
@@ -76,7 +77,7 @@ char	*get_next_line(int fd)
 	aux = malloc(sizeof(char) * (BUFFER_SIZE) + 1);
 	if (!aux)
 		return (NULL);
-	while (bytes > 0 && !ft_strchr(buf,'\n'))
+	while (bytes > 0 && (ft_strchr(buf,'\n') != 0))
 	{
 		bytes = read(fd, aux, BUFFER_SIZE);
 		if (bytes == -1)
@@ -104,7 +105,6 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-*/
 
 int	main(void)
 {

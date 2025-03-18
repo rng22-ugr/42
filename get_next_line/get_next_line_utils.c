@@ -64,6 +64,7 @@ int	ft_strlcpy(char *dst, char *src, int size)
 		dst[i] = src[i];
 		i++;
 	}
+
 	if (size > 0)
 		dst[i] = '\0';
 	while (src[i])
@@ -71,11 +72,13 @@ int	ft_strlcpy(char *dst, char *src, int size)
 	return (i);
 }
 
+/*
 int copy_shift(char *dst, char *src, int size)
 {
 	
 	
 }
+*/
 
 char	*extract(char *buf)
 {
@@ -99,8 +102,7 @@ char	*extract(char *buf)
 	return (line);
 }
 
-char	*cropper(char *buf, char c)
-	{
+char	*cropper(char *buf, char c) {
 	int		i;
 	int		j;
 	char	*newbuf;
