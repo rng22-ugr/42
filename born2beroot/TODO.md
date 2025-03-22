@@ -1,12 +1,31 @@
 # Lo que dice el subject
-## Sin servidor gráfico de ningún tipo
+## Hostname = ranavarr42
 ## Al menos dos particiones cifradas, usando LVM
 ## Diferencias entre aptitude y apt
+- apt: Advanced Packaging Tool. Controla instalación de software. 
+es de bajo nivel y acepta .deb y .rpm
+- aptitude: es un gestor de alto nivel con interfaz en ncurses que añade
+funciones y autatiza ciertas tareas.	
 ## SElinux y AppArmor
-## El ssh Se conecta por el puerto 4242
+### SElinux
+- Orientado a proteger todo el sistema
+- Hecho por la NSA??
+- Es un set de modificaciones del kernel.
+- Control de acceso obligatorio
+- Control de acceso basado en roles
+esto es, que solo ciertos usuarios, que controlan la org. tienen acceso
+al sistema.  - Integrado en Mainline Linux
+### Apparmor
+- Orientado a progeger el sistema de ficheros.
+- Más fácil de configurara.
+
+
+
+#El ssh Se conecta por el puerto 4242
 # No ssh como root
 ## Con el firewall UFW, cierra todos los puertos menos 4242
 ## Hostname de la máquina = ranavarr42
+
 ## Política de contraseñas fuerte
 - Contraseña expira cada 30 dias
 - El número de dias permitido antes de modificar una contraseña es 2
@@ -39,4 +58,84 @@ el mismo caracter 3 veces.
 - Número de usuarios del servidor
 - IPv4 y Mac
 - Número de comandos ejecutados con sudo
+
+
+contraseña root = 8igu8 
+contraseña host name = 5ddu8 
+encription passphrase = esto es una frase
+
+- El puerto 22 esta abierto? debería cerrarlo???
+
+
+                  _      _      _
+               __(.)< __(.)> __(.)=
+               \___)  \___)  \___)   hjw
+
+
+# First of all
+1.	Hostname = ranavarr42
+2.	skip domain name
+3.	root pasword = passwd42
+4.	User name = ranavarr
+5.	User password = pass24
+# particiones
+5.	guided - Use entire disk	and set up encrypted LVM
+6.	Separate /home, /var and /tmp partitions (importante para el bonus)
+7.	sda encryption password = sdancript
+8.	Ajustar tamaño de la partición (he puesto 15GB)
+9.	Crear logical volume srv
+11.	#doubt. What size?
+12.	ext4 journaling system
+13.	mount to /srv
+14.	Crear logical volume var-log
+15.	#doubt. What size?
+16.	ext4 journaling system
+17.	mount to /var/log
+18.	"configure logical volume manager"
+19.	avoid scanning for extra installation media.
+20.	select default debian mirror
+21.	Leave proxy settings blank
+22.	Do not participate
+23.	Ensure to install GRUB loader
+24.	select to install SSH Server and Standard system utilitites
+25.	reboot
+# SSH setup
+26.	check service status. systemctl status ssh
+27.	at /etc/ssh/sshd_config, change Port 22 to Port 4242
+28.	Same file, PermitRootLogin to no
+29. restart SSH with systemctl restart ssh
+# port forwarding
+In virtual machine settings
+1.	Network
+2.	Advanced
+3.	Port Forwarding
+4.	Create New rule named SSH
+5.	find avalilable host port
+6.	guest port = 4242
+7.	Logout of the vm `logout`
+# firewall	
+on host terminal
+1.	`ssh ranavarr@localhost -p nosepuerto` 
+2.	switch to root `su -`
+3.	install ufw
+4.	block all incoming requests `ufw default deny incoming`
+5.	`ufw default allow outgoing` allow all outgoing requests
+6.	`ufw allow 4242`
+# sudo 
+1.	instalar sudo
+2.	`visudo` para configurar sudo
+3.	add: `Defaults secure_path="/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin"
+4.	add: `Defaults requiretty`
+5.	add: `Defaults badpass_message="YOU GOT IT WRONG"`
+5.	add: `Defaults logfile="/var/log/sudo/sudo.log"`
+5.	add: `Defaults log_input`
+5.	add: `Defaults log_output`
+5.	add: `Defaults iolog_dir=/var/log/sudo`
+5.	add: `Defaults passwd_tries=3`
+# groups
+1.	`groupadd user42`
+2.	`usermod -a -G user42,sudo ranavarr` 
+3.	`cat /etc/group` verify changes
+# Password policy
+
 
