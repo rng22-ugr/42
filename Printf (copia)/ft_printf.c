@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/22 16:44:49 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/22 16:46:50 by ranavarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -269,7 +281,7 @@ int	main(void)
 	ft_printf("probando introducir cadenas: %s \n", "me muero");
 	ft_printf("probando introducir números positivos: %i \n", 139);
 	ft_printf("probando introducir números negativos: %i \n", -139);
-	ft_printf("probando introducir caracteres: %c y luego cadenas %s \n", c, "no se cuanto mas aguantare");
+	ft_printf(" introducir carares: %c y luego cads %s \n", c, "no se cuan);
 	ft_printf("probando introducir números sin signo: %u  \n", 29);
 	ft_printf("probando introducir hexadecimales positivos: %x  \n", 29);
 	ft_printf("probando introducir hexadecimales negativos: %x  \n", -29);

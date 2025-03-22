@@ -1,15 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/22 16:44:01 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/22 16:48:20 by ranavarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_hex_len(uintptr_t value)
 {
 	int	len;
 
+	len = 0;
 	while (value)
 	{
 		value /= 16;
 		len++;
 	}
-	return len;
+	return (len);
 }
 /*
 int ft_puthex_long(long unsigned int num)
@@ -39,7 +52,6 @@ int ft_puthex_long(long unsigned int num)
 }	
 */
 
-
 int	ft_print_ptr(uintptr_t ptr)
 {
 	char	*buffer;
@@ -52,4 +64,3 @@ int	ft_print_ptr(uintptr_t ptr)
 	len = ft_puthex_long(ptr);
 	return (len + 2);
 }
-
