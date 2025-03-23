@@ -20,7 +20,7 @@
 # include <unistd.h>
 
 //	printers
-int				ft_print_char(char c);
+int				ft_putchar(char c);
 int				ft_print_str(char *str);
 int				ft_print_int(int i);
 int				ft_print_percent(void);
@@ -34,6 +34,6 @@ int				ft_int_len(int i);
 char			*ft_itoa(int i, char *str);
 unsigned int	ft_unsigned_len(unsigned int i);
 char			*ft_uitoa(unsigned int i, char *str);
-int				ft_hex_len(uintptr_t value);
+int				ft_hex_len(int n);
 
 #endif

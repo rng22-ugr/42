@@ -12,70 +12,62 @@
 
 #include "ft_printf.h"
 
-void	ft_puthex_recursive(int n, char *chars)
+int	ft_hex_len(int n)
 {
-	if (n >= 16)
-		ft_puthex_recursive(n / 16, chars);
-	ft_print_char(chars[n % 16]);
-}
+	int	len;
 
-int	ft_puthex(int n, char *chars)
-{
-	int		i;
-	int		temp;	
-
-	temp = n;
-	if (n < 0)
-	{
-		ft_print_char('-');
-		n = n * -1;
-		i = 1;
-	}
-	else
-		i = 0;
+	len = 0;
 	if (n == 0)
-	{
-		ft_print_char('0');
 		return (1);
-	}
-	ft_puthex_recursive(n, chars);
-	while (temp > 0)
+	while (n)
 	{
-		temp /= 16;
-		i = i + 3;
+		n /= 16;
+		len++;
 	}
-	return (i);
+	return (len);
 }
 
-// Tendre que quitar los shift operators
-// #arreglar
-
-int	ft_puthex_long(long unsigned int num)
+int	ft_print_hex(int n, char *chars)
 {
-	const char	hex_digits[] = "0123456789abcdef";
-	int			shift;
-	int			started;
-	int			i;
-	char		digit;
+	int		len;
+	char	*buffer;
+	int		i;
 
-	i = 1;
-	started = 0;
-	shift = (sizeof(num) * 8) - 4;
-	if (num == 0)
-	{
-		ft_print_char('0');
+	len = ft_hex_len(n);
+	i = len - 1;
+	buffer = malloc(sizeof(char) * (len + 1));
+	if (!buffer)
 		return (0);
-	}
-	while (shift >= 0)
+	buffer[len] = 0;
+	while (i >= 0)
 	{
-		digit = hex_digits[(num >> shift) & 0xF];
-		if (digit != '0' || started)
-		{
-			ft_print_char(digit);
-			started = 1;
-		}
-		shift -= 4;
-		i++;
+		buffer[i] = chars[n % 16];
+		n /= 16;
+		i--;
+	}
+	ft_print_str(buffer);
+	free(buffer);
+	buffer = NULL;
+	return (len);
+}
+/*
+int	main(void)
+{
+	int		i = 0;
+
+	// hex_len test
+	while (i <= 300)
+	{
+		printf("value = %i || len = %i\n", i, ft_hex_len(i));
+		i += 10;
+	}
+	i = 0;
+	while (i <= 300)
+	{
+		ft_print_hex(i, "0123456789abcdef");
+		ft_putchar('\n');
+		i += 1;
 	}
 	return (i);
 }
+*/

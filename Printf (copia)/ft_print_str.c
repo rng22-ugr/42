@@ -18,6 +18,6 @@ int	ft_print_str(char *str)
 
 	i = 0;
 	while (str[i])
-		i += ft_print_char(str[i]);
+		i += ft_putchar(str[i]);
 	return (i);
 }
