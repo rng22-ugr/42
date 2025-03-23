@@ -1,51 +1,50 @@
-	//#include "libft.h"
-//#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/22 16:44:11 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/22 16:44:12 by ranavarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int int_len(long nbr);
-static char *pre_conv(int len);
+#include "ft_printf.h"
 
-char *ft_itoa(int n)
+int	ft_int_len(int i)
 {
-	char *tmp;
-    int len;
-    int i;
-    char *result;
-    long nbr;
+	int	len;
 
-    nbr = n;
-    len = int_len(nbr);
-    result = pre_conv(len);
-    if (!result)
-        return (NULL);
-    while (nbr != 0)
-    {
-        result[i] = ((nbr % 10) + 48);
-        nbr = nbr / 10;
-        i--;
-    }
-    tmp = malloc((len + 1) * sizeof(char));
-    if (!tmp)
-        return (NULL);
-    tmp[0] = '0';
-    return (tmp);
+	if (i == 0)
+		return (1);
+	len = 0;
+	while (i)
+	{
+		len++;
+		i /= 10;
+	}
+	return (len);
 }
 
-static int_len(long nbr)
+char	*ft_itoa(int i, char *str)
 {
-    int count;
+	int		len;
 
-    count = 0;
-    if (nbr < 0)
-    {
-        count++;
-        nbr = -nbr;
-    }
-    if (nbr == 0)
-        count++;
-    while (nbr != 0)
-    {
-        nbr /= 10;
-        count++;
-    }
-    return (count);
+	len = ft_int_len(i);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (i < 0)
+	{
+		len++;
+		str[0] = '-';
+		i = i * -1;
+	}
+	while (i)
+	{
+		str[--len] = ((i % 10) + 48);
+		i /= 10;
+	}
+	return (str);
 }

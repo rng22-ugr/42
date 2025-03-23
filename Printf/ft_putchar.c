@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_percent.c                                 :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/22 17:00:17 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 17:01:57 by ranavarr         ###   ########.fr       */
+/*   Created: 2025/03/22 16:44:32 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/22 16:47:28 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_percent(void)
+int	ft_putchar(char c)
 {
-	return (ft_putchar('%'));
+	write(1, &c, 1);
+	return (1);
 }

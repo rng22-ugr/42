@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/22 16:50:33 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 17:03:50 by ranavarr         ###   ########.fr       */
+/*   Created: 2025/03/22 16:44:49 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/22 16:46:50 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdarg.h>
 #include <stdint.h>
 #include "ft_printf.h"
 
 /*
-int	ft_print_char(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -29,7 +30,7 @@ int	ft_print_str(char *str)
 
 	i = 0;
 	while (str[i])
-		i += ft_print_char(str[i]);
+		i += ft_putchar(str[i]);
 	return (i);
 }
 
@@ -87,7 +88,7 @@ int	ft_print_int(int i)
 
 int ft_print_percent(void)
 {
-	return (ft_print_char('%'));
+	return (ft_putchar('%'));
 }
 
 unsigned int	ft_unsigned_len(unsigned i)
@@ -109,7 +110,7 @@ void ft_puthex_recursive(int n, char *chars)
 {
 	if (n >= 16)
 		ft_puthex_recursive(n / 16, chars);
-	ft_print_char(chars[n % 16]);
+	ft_putchar(chars[n % 16]);
 }
 
 int ft_puthex(int n, char *chars)
@@ -119,7 +120,7 @@ int ft_puthex(int n, char *chars)
 
 	if (n < 0)
 	{
-		ft_print_char('-');
+		ft_putchar('-');
 		n = n * -1;
 		i = 1;
 	}
@@ -127,7 +128,7 @@ int ft_puthex(int n, char *chars)
 		i = 0;
 	if (n == 0)
 	{
-		ft_print_char('0');
+		ft_putchar('0');
 		return 1;
 	}
 	ft_puthex_recursive(n, chars);
@@ -149,7 +150,7 @@ int ft_puthex_long(long unsigned int num)
 
 	i = 1;
 	if (num == 0) {
-		ft_print_char('0');
+		ft_putchar('0');
 		return (1);
 	}
 
@@ -157,7 +158,7 @@ int ft_puthex_long(long unsigned int num)
 	{
 		char digit = hex_digits[(num >> shift) & 0xF];  // Extract 4-bit chunk
 		if (digit != '0' || started) {
-			ft_print_char(digit);
+			ft_putchar(digit);
 			started = 1;
 		}
 		shift -= 4;
@@ -218,11 +219,12 @@ int	ft_print_ptr(uintptr_t ptr)
 	len = ft_puthex_long(ptr);
 	return (len + 2);
 }
+*/
 
 int	selector(char c, va_list args)
 {
 	if (c == 'c')
-		return (ft_print_char(va_arg(args, int)));
+		return (ft_putchar(va_arg(args, int)));
 	else if (c == 's')
 		return (ft_print_str(va_arg(args, char *)));
 	else if (c == 'i' || c == 'd')
@@ -268,7 +270,8 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (j);
 }
-*/
+
+/*
 int	main(void)
 {
 	char	c = 'A';
@@ -278,7 +281,7 @@ int	main(void)
 	ft_printf("probando introducir cadenas: %s \n", "me muero");
 	ft_printf("probando introducir números positivos: %i \n", 139);
 	ft_printf("probando introducir números negativos: %i \n", -139);
-	ft_printf("probando introducir caracteres: %c y luego cadenas %s \n", c, "no se cuanto mas aguantare");
+	ft_printf(" introducir carares: %c y luego cads %s \n", c, "no se cuan);
 	ft_printf("probando introducir números sin signo: %u  \n", 29);
 	ft_printf("probando introducir hexadecimales positivos: %x  \n", 29);
 	ft_printf("probando introducir hexadecimales negativos: %x  \n", -29);
@@ -289,4 +292,4 @@ int	main(void)
 
 	return (0);
 }
-
+*/
