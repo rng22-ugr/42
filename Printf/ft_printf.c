@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 16:44:49 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 16:46:50 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/24 14:00:30 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,14 +106,14 @@ unsigned int	ft_unsigned_len(unsigned i)
 	return (len);
 }
 
-void ft_puthex_recursive(int n, char *chars)
+void ft_print_hex_recursive(int n, char *chars)
 {
 	if (n >= 16)
-		ft_puthex_recursive(n / 16, chars);
+		ft_print_hex_recursive(n / 16, chars);
 	ft_putchar(chars[n % 16]);
 }
 
-int ft_puthex(int n, char *chars)
+int ft_print_hex(int n, char *chars)
 {
 	int		i;
 	int		temp;
@@ -131,7 +131,7 @@ int ft_puthex(int n, char *chars)
 		ft_putchar('0');
 		return 1;
 	}
-	ft_puthex_recursive(n, chars);
+	ft_print_hex_recursive(n, chars);
 	temp = n;
 	while (temp > 0)
 	{
@@ -141,7 +141,7 @@ int ft_puthex(int n, char *chars)
 	return i;
 }
 
-int ft_puthex_long(long unsigned int num)
+int ft_print_hex_long(long unsigned int num)
 {
 	const char	hex_digits[] = "0123456789abcdef";
 	int			shift = (sizeof(num) * 8) - 4;
@@ -153,6 +153,7 @@ int ft_puthex_long(long unsigned int num)
 		ft_putchar('0');
 		return (1);
 	}
+	p
 
 	while (shift >= 0)
 	{
@@ -176,6 +177,7 @@ char *ft_uitoa(unsigned int i, char *str)
 		return (NULL);
 	str[len] = '\0';
 	while (i)
+		b
 	{
 		str[--len] = ((i % 10) + '0');
 		i /= 10;
@@ -197,6 +199,7 @@ int	ft_print_unsigned(unsigned int n)
 
 int	ft_hex_len(uintptr_t value)
 {
+
 	int	len;
 
 	while (value)
@@ -216,7 +219,7 @@ int	ft_print_ptr(uintptr_t ptr)
 	if (!buffer)
 		return (0);
 	ft_print_str("0x");
-	len = ft_puthex_long(ptr);
+	len = ft_print_hex_long(ptr);
 	return (len + 2);
 }
 */
@@ -234,9 +237,9 @@ int	selector(char c, va_list args)
 	else if (c == 'u')
 		return (ft_print_unsigned(va_arg(args, unsigned)));
 	else if (c == 'x')
-		return (ft_puthex(va_arg(args, int), "0123456789abcdef"));
+		return (ft_print_hex(va_arg(args, int), "0123456789abcdef"));
 	else if (c == 'X')
-		return (ft_puthex(va_arg(args, int), "0123456789ABCDEF"));
+		return (ft_print_hex(va_arg(args, int), "0123456789ABCDEF"));
 	else if (c == 'p')
 		return (ft_print_ptr(va_arg(args, uintptr_t)));
 	else

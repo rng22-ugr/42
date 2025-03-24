@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 16:50:33 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 17:03:50 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/24 12:25:42 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -269,6 +269,7 @@ int	ft_printf(char const *str, ...)
 	return (j);
 }
 */
+
 int	main(void)
 {
 	char	c = 'A';

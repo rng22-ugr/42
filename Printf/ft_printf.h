@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 17:02:29 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 17:03:01 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/24 12:45:34 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ int				ft_putchar(char c);
 int				ft_print_str(char *str);
 int				ft_print_int(int i);
 int				ft_print_percent(void);
-void			ft_puthex_recursive(int n, char *chars);
-int				ft_puthex(int n, char *chars);
-int				ft_puthex_long(long unsigned int num);
+int				ft_print_hex(int n, char *chars);
+int				ft_print_hex_long(uintptr_t num, char *chars);
 int				ft_print_unsigned(unsigned int n);
 int				ft_print_ptr(uintptr_t ptr);
+int				ft_printf(char const *str, ...);
+
 //	utils
 int				ft_int_len(int i);
 char			*ft_itoa(int i, char *str);
