@@ -6,7 +6,7 @@
 /*   By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 19:32:52 by ranavarr          #+#    #+#             */
-/*   Updated: 2024/12/27 18:34:56 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/11 15:43:39 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -14,6 +14,8 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <limits.h>
+# include <stdint.h>
 
 int		ft_isalpha(int v);
 int		ft_isdigit(int v);

@@ -1,7 +1,13 @@
-# Lo que dice el subject
-## Hostname = ranavarr42
+
+## root password = r00T
+## username = ranavarr
+## ranavarr password = tH3W0rd ahora: B0D4C1us80
+## Encryption passphrase = Holdyourcol0ur
 ## Al menos dos particiones cifradas, usando LVM
+## editar crontab con `crontab -e`
+
 ## Diferencias entre aptitude y apt
+
 - apt: Advanced Packaging Tool. Controla instalación de software. 
 es de bajo nivel y acepta .deb y .rpm
 - aptitude: es un gestor de alto nivel con interfaz en ncurses que añade
@@ -12,7 +18,7 @@ funciones y autatiza ciertas tareas.
 - Hecho por la NSA??
 - Es un set de modificaciones del kernel.
 - Control de acceso obligatorio
-- Control de acceso basado en roles
+- Contro de acceso basado en roles
 esto es, que solo ciertos usuarios, que controlan la org. tienen acceso
 al sistema.  - Integrado en Mainline Linux
 ### Apparmor
@@ -73,11 +79,6 @@ encription passphrase = esto es una frase
 
 
 # First of all
-1.	Hostname = ranavarr42
-2.	skip domain name
-3.	root pasword = passwd42
-4.	User name = ranavarr
-5.	User password = pass24
 # particiones
 5.	guided - Use entire disk	and set up encrypted LVM
 6.	Separate /home, /var and /tmp partitions (importante para el bonus)
@@ -101,7 +102,7 @@ encription passphrase = esto es una frase
 25.	reboot
 # SSH setup
 26.	check service status. systemctl status ssh
-27.	at /etc/ssh/sshd_config, change Port 22 to Port 4242
+27.	at /etc/ssh/sshd_config, change Port 22 to Port 4343 (porque el 42 no va)
 28.	Same file, PermitRootLogin to no
 29. restart SSH with systemctl restart ssh
 # port forwarding
@@ -137,5 +138,5 @@ on host terminal
 2.	`usermod -a -G user42,sudo ranavarr` 
 3.	`cat /etc/group` verify changes
 # Password policy
-
+1.	`vim pa
 
