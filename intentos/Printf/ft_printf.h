@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 17:02:29 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/24 12:45:34 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/25 18:26:24 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int				ft_print_ptr(uintptr_t ptr);
 int				ft_printf(char const *str, ...);
 
 //	utils
-int				ft_int_len(int i);
-char			*ft_itoa(int i, char *str);
-unsigned int	ft_unsigned_len(unsigned int i);
-char			*ft_uitoa(unsigned int i, char *str);
-int				ft_hex_len(int n);
+int			ft_int_len(int i);
+char	*ft_itoa(int i, char *str);
+int		ft_unsigned_len(unsigned int i);
+char	*ft_uitoa(unsigned int i, char *str);
+int		ft_hex_len(int n);
 
 #endif

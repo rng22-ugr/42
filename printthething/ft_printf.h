@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 17:02:29 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 17:03:01 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:44:21 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,11 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
-//	printers
-int				ft_putchar(char c);
-int				ft_print_str(char *str);
-int				ft_print_int(int i);
-int				ft_print_percent(void);
-void			ft_puthex_recursive(int n, char *chars);
-int				ft_puthex(int n, char *chars);
-int				ft_puthex_long(long unsigned int num);
-int				ft_print_unsigned(unsigned int n);
-int				ft_print_ptr(uintptr_t ptr);
-//	utils
-int				ft_int_len(int i);
-char			*ft_itoa(int i, char *str);
-unsigned int	ft_unsigned_len(unsigned int i);
-char			*ft_uitoa(unsigned int i, char *str);
-int				ft_hex_len(int n);
+int	ft_printf(char *str, ...);
+int	ft_putchar(char c);
+int	ft_put_percent(void);
+int	ft_print_str(char *str);
 
 #endif
