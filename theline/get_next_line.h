@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 14:00:17 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/30 01:47:52 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/30 17:06:33 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
-
+#  define BUFFER_SIZE 2
 # endif
 
 # include <limits.h>
