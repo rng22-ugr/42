@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 14:00:17 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/29 16:04:06 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/30 01:47:52 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int			ft_strlen(const char *s);
 char		*ft_strchr(const char *s, int c);
 size_t		t_strlcpy(char *dst, const char *src, size_t size);
 char		*ft_strjoin(const char *s1, const char *s2);
-char		*substr(char *str, char c);
+char		*substr(char *str, int len);
 
 #endif

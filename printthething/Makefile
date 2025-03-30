@@ -6,6 +6,7 @@ SOURCES = \
 	ft_printf.c\
 	ft_putchar.c\
 	ft_put_percent.c\
+	ft_print_str.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -1,12 +1,12 @@
-		/* ****/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rafa <rafa@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/11 12:55:25 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/11 21:14:12 by rafa             ###   ########.fr       */
+/*   Created: 2025/03/29 13:55:12 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/03/29 13:59:33 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,12 @@ char	*get_next_line(int fd)
 	if (!line)
 	{
 		free(aux);
+		aux = NULL;
 		return (NULL);
 	}
 	buf = cropper(buf, '\n');
 	free(aux);
+	aux = NULL;
 	if (!line)
 	{
 		buf = NULL;

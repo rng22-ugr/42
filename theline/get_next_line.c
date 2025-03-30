@@ -6,11 +6,11 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 14:30:00 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/29 16:05:56 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/30 05:49:54 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_next_line.h>
+#include "get_next_line.h"
 
 int	ft_strlen(const char *s)
 {
@@ -75,15 +75,74 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	return (res);
 }
 
-char	*substr(char *str, char c)
+char	*substr(char *s, int len)
 {
-	int	i;
+	int		i;
+	char	*substr;
 
 	i = 0;
-	if (!str)
+	if (!s)
 		return (0);
-	while (str[i] != c)
+	substr = malloc(sizeof(char) * len + 1);
+	if (!substr)
+		return (substr = NULL);
+	while (i < len && s[i])
 	{
+		substr[i] = s[i];
 		i++;
 	}
+	substr[i] = 0;
+	return (substr);
+}
+
+char	*shortbuffer(char **s, int pos)
+{
+	int		i;
+	int		len;
+	char	*newbuffer;
+
+	i = 0;
+	len = 0;
+	if (!s || !*s)
+		return (NULL);
+	while ((*s)[len])
+		len++;
+	if (pos > len)
+		return (NULL);
+	newbuffer = malloc(sizeof(char) * (len - pos + 1));
+	if (!newbuffer)
+		return (NULL);
+	while ((*s)[pos])
+		newbuffer[i++] = (*s)[pos++];
+	newbuffer[i] = 0;
+	free(*s);
+	*s = NULL;
+	return (newbuffer);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*buffer;
+	char		*output;
+	int			bytes;
+
+	bytes = read(fd, buffer, BUFFER_SIZE); 
+	if (bytes < 0)
+		return (NULL);
+	return ()
+}	
+
+int	main(void)
+{
+	char	*str;
+	int		fd;
+
+	fd = open("get_next_line.c", O_RDONLY);
+	str = substr("0123456789", 5);
+	printf("%s \n", str);
+	str = shortbuffer(&str, 4);
+	printf("%s \n", str);
+	free(str);
+	str = NULL;
+	return (0);
 }
