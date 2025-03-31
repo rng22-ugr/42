@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 14:30:00 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/31 13:38:46 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/03/31 13:44:35 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -260,13 +260,13 @@ int	main(void)
 	char	file[] = "get_next_line.c";
 
 	fd = open(file, O_RDONLY);
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
-	printf("%s \n", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
+	printf("%s", get_next_line(fd));
 	close(fd);
 	return (0);
 }
