@@ -6,11 +6,22 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 19:39:28 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/01 20:02:28 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/02 01:52:20 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+
+int	ft_strlen(const char *s)
+{
+	int	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -76,8 +87,8 @@ char	*ft_strchr(const char *s, int c)
 
 char	*ft_realloc(char *ptr, size_t size)
 {
-	char	*newarray;
-	int		i;
+	char		*newarray;
+	size_t		i;
 
 	if (!ptr)
 		return (NULL);
@@ -85,7 +96,7 @@ char	*ft_realloc(char *ptr, size_t size)
 	newarray = malloc(size);
 	if (!newarray)
 		return (NULL);
-	while (ptr[i] && i < size - 1)
+	while (ptr[i] && i < size)
 	{
 		newarray[i] = ptr[i];
 		i++;
@@ -95,6 +106,34 @@ char	*ft_realloc(char *ptr, size_t size)
 	return (newarray);
 }
 
+ssize_t	nlpos(char *buffer)
+{
+	ssize_t	pos;
+
+	pos = 0;
+	while (buffer[pos] != '\0' && buffer[pos] != '\n')
+		pos++;
+	if (buffer[pos] == '\n')
+		return (pos);
+	else
+		return (-1);
+}
+
+char	*extracted_line(char **dst, const char *src, ssize_t nlpos)
+{
+	int		i;
+	int		len;
+	char	*tmp;
+
+	if (nlpos < 0)
+		return (NULL);
+	len = ft_strlen(dst);
+	tmp = malloc(sizeof(char) * (len + BUFFER_SIZE + 1));
+	
+	while ()
+	return (*dst);
+}
+/*
 // get_next_line
 // takes: file descriptor
 // returns: char array containing the next line to be read
@@ -107,28 +146,49 @@ char	*get_next_line(int fd)
 	int			laps;
 
 	// check that file descriptor is valid, if it isnt't exit
-	if (fd > 0 || BUFFER_SIZE <= 0)
-	{
-		free(line);
-		line = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	}
+	printf("fd valido y buffer size valido \n");
+	line = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!line)
+		return (NULL);
+	printf("line ya existe \n");
+	line[BUFFER_SIZE] = 0;
+	printf("line[BUFFER_SIZE] = 0 \n");
 	laps = 0;
+	printf("laps = %i \n", laps);
 	// esta buffer vacio?
 	if (buffer[0] == 0)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
+		printf("bytes = %i \n", bytes);
+		printf("laps = %i \n", laps);
+		if (bytes == 0)
+		{
+			free(line);
+			line = NULL;
+			return (NULL);
+		}
 		buffer[BUFFER_SIZE] = '\0';
 	}
 	nlpos = ft_strchr((char *)buffer, '\n');
 	while (nlpos == 0)
 	{
-		ft_realloc(line, (sizeof(char) * ((laps * BUFFER_SIZE) + 1)));
-		ft_memmove(line, buffer, ((laps - 1) * BUFFER_SIZE));
+		ft_realloc(line, (sizeof(char) * ((laps * BUFFER_SIZE) + 2)));
+		ft_memmove(ft_strchr(line, '\0'), buffer, BUFFER_SIZE);
 		bytes = read(fd, buffer, BUFFER_SIZE);
+		if (bytes == 0)
+		{
+			free(line);
+			line = NULL;
+			return (NULL);
+		}
+		nlpos = ft_strchr((char *)buffer, '\n');
 		laps ++;
 	}
-	
+	ft_realloc(line, (sizeof(char) * ((laps * BUFFER_SIZE) + 1)));
+	ft_memmove(ft_strchr(line, '\0'), buffer, nlpos - buffer[0]);
+	ft_memmove(buffer, buffer[&nlpos - &buffer[0]], BUFFER_SIZE - (nlpos - buffer[0]));
 	// test that the read worked
 	// extract line from what is read
 	// loop on the buffer to find a newline, if there is none, read again
@@ -137,9 +197,22 @@ char	*get_next_line(int fd)
 	// move buffer content
 	return (line);
 	}
-
+*/
 // main meant for testing purposes
 int	main(void)
 {
+	printf("%li\n", nlpos("neeeewline"));
+	printf("%li\n", nlpos("ne\newline"));
+	printf("%li\n", nlpos("neeeewline"));
+	printf("%li\n", nlpos("ne\neeewline"));
+	printf("%li\n", nlpos("neeeew\nline"));
+	printf("%li\n", nlpos("neeeewline"));
+	printf("%li\n", nlpos("neeee\nwline"));
+	printf("%li\n", nlpos("neeeewline"));
+	printf("%li\n", nlpos("neeee\nwline"));
+	printf("%li\n", nlpos("neeeewline"));
+	printf("%li\n", nlpos("n\neeeewline"));
+	printf("%li\n", nlpos("\nneeeewline"));
+
 	return (0);
 }
