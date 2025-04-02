@@ -12,7 +12,6 @@
 
 #include "get_next_line.h"
 
-
 int	ft_strlen(const char *s)
 {
 	int	len;
@@ -88,11 +87,18 @@ char	*ft_strchr(const char *s, int c)
 char	*ft_realloc(char *ptr, size_t size)
 {
 	char		*newarray;
-	size_t		i;
+	size_t		old_size;
 
+	if (size == 0)
+	{
+		free(ptr);
+		return(NULL);
+	}
 	if (!ptr)
-		return (NULL);
-	i = 0;
+		return (malloc(size));
+	old_size = strlen(ptr);
+	if (old_size > size)
+		old_size = size;
 	newarray = malloc(size);
 	if (!newarray)
 		return (NULL);
@@ -101,7 +107,11 @@ char	*ft_realloc(char *ptr, size_t size)
 		newarray[i] = ptr[i];
 		i++;
 	}
-	newarray[i] = 0;
+	while (i <= size)
+	{
+		newarray[i] = 0;
+		i++;
+	}
 	free(ptr);
 	return (newarray);
 }
