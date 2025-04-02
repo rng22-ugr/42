@@ -122,16 +122,31 @@ ssize_t	nlpos(char *buffer)
 char	*extracted_line(char **dst, const char *src, ssize_t nlpos)
 {
 	int		i;
+	int		j;
 	int		len;
 	char	*tmp;
 
 	if (nlpos < 0)
 		return (NULL);
-	len = ft_strlen(dst);
+	i = 0;
+	j = 0;
+	len = ft_strlen(*dst);
 	tmp = malloc(sizeof(char) * (len + BUFFER_SIZE + 1));
-	
-	while ()
-	return (*dst);
+	while (dst[i])
+	{
+		tmp[i] = *dst[i];
+		i++;
+	}
+	while (src[j] && i <= nlpos)
+	{
+		tmp[i] = src[j];
+		i++;
+		j++;
+	}
+	tmp[i] = '\0';
+	free(*dst);
+	*dst = NULL;
+	return (tmp);
 }
 /*
 // get_next_line
@@ -201,6 +216,11 @@ char	*get_next_line(int fd)
 // main meant for testing purposes
 int	main(void)
 {
+	char	*str;
+	char	*chars;
+
+	str = malloc(sizeof(char) * (11));
+	chars = malloc(sizeof(char) * (11));
 	printf("%li\n", nlpos("neeeewline"));
 	printf("%li\n", nlpos("ne\newline"));
 	printf("%li\n", nlpos("neeeewline"));
