@@ -20,9 +20,13 @@
 # include <unistd.h>
 # include <stdio.h>
 
-int	ft_printf(char *str, ...);
-int	ft_putchar(char c);
-int	ft_put_percent(void);
-int	ft_print_str(char *str);
+int			ft_printf(char *str, ...);
+
+int		ft_putchar(char c);
+int		ft_put_percent(void);
+int		ft_print_str(char *str);
+char	*ft_itoa(int n, char *str, int base);
+char	*ft_uitoa(unsigned long long int num, char *str, int base);
+void	reverse(char str[], int lenght);
 
 #endif

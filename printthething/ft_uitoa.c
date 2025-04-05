@@ -1,5 +1,6 @@
 # include "ft_printf.h"
 
+/*
 void reverse(char str[], int length)
 {
 	int start;
@@ -16,34 +17,29 @@ void reverse(char str[], int length)
 		start++;
 	}
 }
-
-char* ft_itoa(int num, char* str, int base)
+*/
+char* ft_uitoa(unsigned long long int num, char* str, int base)
 {
 	int i;
-	int isNegative;
 
 	i = 0;
-	isNegative = 0;
-	if (num == 0) {
+	if (num == 0) 
+	{
 		str[i++] = '0';
 		str[i] = '\0';
 		return str;
 	}
-	if (num < 0 && base == 10) {
-		isNegative = 1;
-		num = -num;
-	}
-	while (num != 0) {
+	while (num != 0) 
+	{
 		int rem = num % base;
 		str[i++] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
 		num = num / base;
 	}
-	if (isNegative)
-		str[i++] = '-';
 	str[i] = '\0';
 	reverse(str, i);
 return str;
 }
+
 /*
 int main()
 {
