@@ -3,16 +3,18 @@ CFLAGS = -Wall -Werror -Wextra
 AR = ar crs
 RM = rm -f
 SOURCES = \
-	ft_printf.c \
-	ft_itoa.c \
-	ft_putchar.c \
-	ft_print_int.c \
+	ft_itoa.c\
+	ft_print_dec.c\
+	ft_printf.c\
+	ft_print_hex\
 	ft_print_percent.c \
-	ft_print_ptr.c \
-	ft_print_str.c \
-	ft_print_unsigned.c \
-	ft_uitoa.c \
-	ft_print_hex.c\
+	ft_print_ptr.c\
+	ft_print_str.c\
+	ft_print_unsigned.c\
+	ft_putchar.c\
+	ft_uitoa.c\
+
+
 
 OBJECTS = $(SOURCES:.c=.o)
 

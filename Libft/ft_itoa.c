@@ -9,7 +9,7 @@ char *ft_itoa(int n)
     int i;
     char *result;
     long nbr;
-    
+
     nbr = n;
     len = int_len(nbr);
     result = pre_conv(len);
@@ -31,7 +31,7 @@ char *ft_itoa(int n)
 static int_len(long nbr)
 {
     int count;
-    
+
     count = 0;
     if (nbr < 0)
     {

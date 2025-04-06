@@ -1,15 +1,16 @@
-# include "ft_printf.h"
+#include "ft_printf.h"
 
-void reverse(char str[], int length)
+void	reverse(char str[], int length)
 {
-	int start;
-	int end;
+	int		start;
+	int		end;
+	char	temp;
 
 	start = 0;
 	end = length - 1;
-	while (start < end) 
+	while (start < end)
 	{
-		char temp = str[start];
+		temp = str[start];
 		str[start] = str[end];
 		str[end] = temp;
 		end--;
@@ -17,20 +18,54 @@ void reverse(char str[], int length)
 	}
 }
 
-char* ft_itoa(int num, char* str, int base)
+char	*ft_itoa(int n, char *s, int b)
 {
 	int i;
-	int isNegative;
+	int r;
+	int neg;
+
+	if (n == 0)
+	{
+		s[0] = '0';
+		s[1] = '\0';
+		return (s);
+	}
+	i = 0;
+	neg = (n < 0 && b == 10);
+	if (neg)
+		n = -n;
+	while (n)
+	{
+		r = n % b;
+		if (r > 9)
+			s[i++] = r - 10 + 'a';
+		else
+			s[i++] = r + '0';
+		n /= b;
+	}
+	if (neg)
+		s[i++] = '-';
+	s[i] = '\0';
+	return (reverse(s, i));
+}
+
+
+/*
+char	*ft_itoa(int num, char *str, int base)
+{
+	int	i;
+	int	isnegative;
 
 	i = 0;
-	isNegative = 0;
-	if (num == 0) {
+	isnegative = 0;
+	if 	(num == 0)
+	{
 		str[i++] = '0';
 		str[i] = '\0';
 		return str;
 	}
 	if (num < 0 && base == 10) {
-		isNegative = 1;
+		isnegative = 1;
 		num = -num;
 	}
 	while (num != 0) {
@@ -38,13 +73,13 @@ char* ft_itoa(int num, char* str, int base)
 		str[i++] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
 		num = num / base;
 	}
-	if (isNegative)
+	if (isnegative)
 		str[i++] = '-';
 	str[i] = '\0';
 	reverse(str, i);
 return str;
 }
-/*
+
 int main()
 {
     char str[100];
