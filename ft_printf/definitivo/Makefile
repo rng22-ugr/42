@@ -1,5 +1,5 @@
 NAME = libftprintf.a
-CFLAGS = -g -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 AR = ar crs
 RM = rm -f
 SOURCES = \

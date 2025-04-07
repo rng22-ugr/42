@@ -6,15 +6,15 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 16:51:14 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/25 18:07:53 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 22:33:10 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hex_len(int n)
+int	ft_hex_len(unsigned long int n)
 {
-	int	len;
+	unsigned long int	len;
 
 	len = 0;
 	if (n == 0)
@@ -27,7 +27,7 @@ int	ft_hex_len(int n)
 	return (len);
 }
 
-int	ft_print_hex(int n, char *chars)
+int	ft_print_hex(unsigned int n, char *chars)
 {
 	int		len;
 	char	*buffer;
@@ -35,10 +35,9 @@ int	ft_print_hex(int n, char *chars)
 
 	len = ft_hex_len(n);
 	i = len - 1;
-	buffer = malloc(sizeof(char) * (len + 1));
+	buffer = ft_calloc(sizeof(char), (len + 1));
 	if (!buffer)
 		return (0);
-	buffer[len] = 0;
 	while (i >= 0)
 	{
 		buffer[i] = chars[n % 16];

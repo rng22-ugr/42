@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 16:44:11 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/07 18:46:44 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:21:51 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,23 @@ int	ft_unsigned_len(unsigned int i)
 
 char	*ft_uitoa(unsigned int i, char *str)
 {
-	int		len;
+	int					len;
+	long unsigned int	tmp;
 
+	tmp = (long unsigned int)i;
 	len = ft_unsigned_len(i);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	if (i == 0)
+	if (tmp == 0)
 	{
 		str[0] = '0';
 		return (str);
 	}
-	while (i)
+	while (tmp)
 	{
-		str[--len] = ((i % 10) + 48);
-		i /= 10;
+		str[--len] = ((tmp % 10) + 48);
+		tmp /= 10;
 	}
 	return (str);
 }

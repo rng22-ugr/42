@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:39:55 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/07 17:02:23 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 22:11:11 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	selector(char c, va_list args)
 	else if (c == 'd' || c == 'i')
 		len = ft_print_dec(va_arg(args, int));
 	else if (c == 'x')
-		len = ft_print_hex(va_arg(args, int), "0123456789abcdef");
+		len = ft_print_hex(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (c == 'X')
-		len = ft_print_hex(va_arg(args, int), "0123456789ABCDEF");
+		len = ft_print_hex(va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if (c == 'p')
-		len = ft_print_ptr((va_arg(args, uintptr_t)));
+		len = ft_print_ptr((va_arg(args, unsigned long int)));
 	else if (c == 'u')
 		len = ft_print_unsigned(va_arg(args, int));
 	return (len);

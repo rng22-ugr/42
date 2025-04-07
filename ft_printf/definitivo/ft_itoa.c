@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 16:44:11 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/07 18:18:07 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:17:03 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,19 @@ int	first_digit(int n)
 	}
 	return (n);
 }
-*/
-int	limit_fix(int n, int len, char *str)
+
+int	limit_fix(long int n, int len, char *str)
 {
 	int	last_digit;
 	int	return_nbr;
 
-	last_digit = (n % 10) * -1;
+	last_digit = (n % -10);
 	str[len - 1] = last_digit + '0';
-	return_nbr = (n / 10) / -1;
-	return (0);
-
+	return_nbr = (n / -10);
+	return (return_nbr);
 }
 
+*/
 int	ft_int_len(int i)
 {
 	int	len;
@@ -75,28 +75,28 @@ int	ft_int_len(int i)
 
 char	*ft_itoa(int i, char *str)
 {
-	int		len;
+	int			len;
+	long int	tmp;	
 
+	tmp = (long int)i;
 	len = ft_int_len(i);
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
-	if (i == 0)
+	if (tmp == 0)
 	{
 		str[0] = '0';
 		return (str);
 	}
-	if (i < 0)
+	if (tmp < 0)
 	{
-		if (i == INT_MIN)
-			i = limit_fix(i, len, str);
 		len++;
+		tmp *= -1;
 		str[0] = '-';
 	}
-	while (i)
+	while (tmp)
 	{
-		str[--len] = ((i % 10) + 48);
-		i /= 10;
+		str[--len] = ((tmp % 10) + 48);
+		tmp /= 10;
 	}
 	return (str);
 }
