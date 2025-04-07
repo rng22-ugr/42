@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:39:55 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/26 15:44:02 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 17:02:23 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	selector(char c, va_list args)
 	else if (c == 's')
 		len = ft_print_str(va_arg(args, char *));
 	else if (c == 'd' || c == 'i')
-		len = ft_print_int(va_arg(args, int));
+		len = ft_print_dec(va_arg(args, int));
 	else if (c == 'x')
 		len = ft_print_hex(va_arg(args, int), "0123456789abcdef");
 	else if (c == 'X')
@@ -36,24 +36,29 @@ int	selector(char c, va_list args)
 	return (len);
 }
 
-int	ft_printf(char *str, ...)
+int	ft_printf(char const *str, ...)
 {
 	va_list	args;
 	int		len;
 	int		i;
 
 	i = 0;
+	len = 0;
 	va_start(args, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
-			len += selector(str[++i], args);
+		{
+			i++;
+			len += selector(str[i], args);
+		}
 		else
+		{
 			ft_putchar(str[i]);
-		len++;
+			len++;
+		}
 		i++;
 	}
-	len += i;
 	va_end(args);
 	return (len);
 }

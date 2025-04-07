@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 17:00:35 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/24 13:35:22 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/07 17:18:09 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_print_str(char *str)
 {
-	unsigned int	i;
+	int	i;
 
+	i = 0;
 	if (str == NULL)
 		return (ft_print_str("(null)"));
-	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);
 		i++;

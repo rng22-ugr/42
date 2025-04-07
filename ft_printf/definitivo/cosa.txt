@@ -1,0 +1,818 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║            printf            ║
+                        ╚══════════════════════════════╝
+⠋ Preparing framework⠙ Preparing framework✔ Preparing framework
+⠋ Executing: norminette⠙ Executing: norminette⠹ Executing: norminette✖ Executing: norminette
+ft_print_hex.c: OK!
+ft_print_percent.c: OK!
+ft_print_ptr.c: OK!
+ft_uitoa.c: OK!
+ft_print_unsigned.c: OK!
+ft_printf.c: OK!
+ft_print_dec.c: OK!
+ft_itoa.c: Error!
+Error: EMPTY_LINE_FUNCTION  (line:  58, col:   1):	Empty line in function
+main.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:  16, col:   4):	space before function name
+Error: NO_ARGS_VOID         (line:  16, col:  10):	Empty function argument requires void
+Error: EMPTY_LINE_EOF       (line:  22, col:   1):	Empty line at end of file
+ft_putchar.c: OK!
+ft_printf.h: OK!
+ft_print_str.c: OK!
+
+⠋ Executing: make fclean all (no bonus)⠙ Executing: make fclean all (no bonus)⠹ Executing: make fclean all (no bonus)⠸ Executing: make fclean all (no bonus)⠼ Executing: make fclean all (no bonus)✔ Executing: make fclean all (no bonus)
+ℹ Running tests: printfTester (https://github.com/Tripouille/printfTester)
+[36m[34m[Mandatory]
+[93mcategory: c[0m
+[32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [0m
+[93mcategory: s[0m
+[32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [0m
+[93mcategory: p[0m
+[31m1.KO [31m2.KO [31m3.KO [31m4.KO [31m5.KO [31m6.KO [31m7.KO [31m8.KO [31m9.KO [0m
+[93mcategory: d[0m
+[32m1.OK ==1640798== Conditional jump or move depends on uninitialised value(s)
+==1640798==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640798==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640798==    by 0x407D19: selector (ft_printf.c:27)
+==1640798==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640798==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640798==    by 0x4050B3: main (d_test.cpp:27)
+==1640798==  Uninitialised value was created by a heap allocation
+==1640798==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640798==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640798==    by 0x407D19: selector (ft_printf.c:27)
+==1640798==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640798==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640798==    by 0x4050B3: main (d_test.cpp:27)
+==1640798== 
+[31m2.KO [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [32m11.OK [32m12.OK ==1640809== Conditional jump or move depends on uninitialised value(s)
+==1640809==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640809==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640809==    by 0x407D19: selector (ft_printf.c:27)
+==1640809==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640809==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640809==    by 0x405297: main (d_test.cpp:38)
+==1640809==  Uninitialised value was created by a heap allocation
+==1640809==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640809==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640809==    by 0x407D19: selector (ft_printf.c:27)
+==1640809==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640809==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640809==    by 0x405297: main (d_test.cpp:38)
+==1640809== 
+[31m13.KO ==1640810== Conditional jump or move depends on uninitialised value(s)
+==1640810==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640810==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640810==    by 0x407D19: selector (ft_printf.c:27)
+==1640810==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640810==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640810==    by 0x4052C3: main (d_test.cpp:39)
+==1640810==  Uninitialised value was created by a heap allocation
+==1640810==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640810==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640810==    by 0x407D19: selector (ft_printf.c:27)
+==1640810==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640810==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640810==    by 0x4052C3: main (d_test.cpp:39)
+==1640810== 
+[31m14.KO ==1640811== Conditional jump or move depends on uninitialised value(s)
+==1640811==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640811==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640811==    by 0x407D19: selector (ft_printf.c:27)
+==1640811==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640811==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640811==    by 0x4052EF: main (d_test.cpp:40)
+==1640811==  Uninitialised value was created by a heap allocation
+==1640811==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640811==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640811==    by 0x407D19: selector (ft_printf.c:27)
+==1640811==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640811==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640811==    by 0x4052EF: main (d_test.cpp:40)
+==1640811== 
+[31m15.KO ==1640812== Conditional jump or move depends on uninitialised value(s)
+==1640812==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640812==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640812==    by 0x407D19: selector (ft_printf.c:27)
+==1640812==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640812==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640812==    by 0x40531B: main (d_test.cpp:41)
+==1640812==  Uninitialised value was created by a heap allocation
+==1640812==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640812==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640812==    by 0x407D19: selector (ft_printf.c:27)
+==1640812==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640812==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640812==    by 0x40531B: main (d_test.cpp:41)
+==1640812== 
+[31m16.KO ==1640813== Conditional jump or move depends on uninitialised value(s)
+==1640813==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640813==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640813==    by 0x407D19: selector (ft_printf.c:27)
+==1640813==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640813==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640813==    by 0x405347: main (d_test.cpp:42)
+==1640813==  Uninitialised value was created by a heap allocation
+==1640813==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640813==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640813==    by 0x407D19: selector (ft_printf.c:27)
+==1640813==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640813==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640813==    by 0x405347: main (d_test.cpp:42)
+==1640813== 
+[31m17.KO ==1640814== Conditional jump or move depends on uninitialised value(s)
+==1640814==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640814==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640814==    by 0x407D19: selector (ft_printf.c:27)
+==1640814==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640814==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640814==    by 0x405373: main (d_test.cpp:43)
+==1640814==  Uninitialised value was created by a heap allocation
+==1640814==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640814==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640814==    by 0x407D19: selector (ft_printf.c:27)
+==1640814==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640814==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640814==    by 0x405373: main (d_test.cpp:43)
+==1640814== 
+[31m18.KO ==1640815== Conditional jump or move depends on uninitialised value(s)
+==1640815==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640815==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640815==    by 0x407D19: selector (ft_printf.c:27)
+==1640815==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640815==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640815==    by 0x40539F: main (d_test.cpp:44)
+==1640815==  Uninitialised value was created by a heap allocation
+==1640815==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640815==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640815==    by 0x407D19: selector (ft_printf.c:27)
+==1640815==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640815==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640815==    by 0x40539F: main (d_test.cpp:44)
+==1640815== 
+[31m19.KO ==1640816== Conditional jump or move depends on uninitialised value(s)
+==1640816==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640816==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640816==    by 0x407D19: selector (ft_printf.c:27)
+==1640816==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640816==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640816==    by 0x4053CB: main (d_test.cpp:45)
+==1640816==  Uninitialised value was created by a heap allocation
+==1640816==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640816==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640816==    by 0x407D19: selector (ft_printf.c:27)
+==1640816==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640816==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640816==    by 0x4053CB: main (d_test.cpp:45)
+==1640816== 
+[31m20.KO ==1640817== Conditional jump or move depends on uninitialised value(s)
+==1640817==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640817==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640817==    by 0x407D19: selector (ft_printf.c:27)
+==1640817==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640817==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640817==    by 0x4053F7: main (d_test.cpp:46)
+==1640817==  Uninitialised value was created by a heap allocation
+==1640817==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640817==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640817==    by 0x407D19: selector (ft_printf.c:27)
+==1640817==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640817==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640817==    by 0x4053F7: main (d_test.cpp:46)
+==1640817== 
+[31m21.KO [32m22.OK ==1640819== Conditional jump or move depends on uninitialised value(s)
+==1640819==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640819==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640819==    by 0x407D19: selector (ft_printf.c:27)
+==1640819==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640819==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640819==    by 0x40544F: main (d_test.cpp:48)
+==1640819==  Uninitialised value was created by a heap allocation
+==1640819==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640819==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640819==    by 0x407D19: selector (ft_printf.c:27)
+==1640819==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640819==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640819==    by 0x40544F: main (d_test.cpp:48)
+==1640819== 
+[31m23.KO ==1640820== Conditional jump or move depends on uninitialised value(s)
+==1640820==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640820==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640820==    by 0x407D19: selector (ft_printf.c:27)
+==1640820==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640820==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640820==    by 0x405480: main (d_test.cpp:49)
+==1640820==  Uninitialised value was created by a heap allocation
+==1640820==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640820==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640820==    by 0x407D19: selector (ft_printf.c:27)
+==1640820==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640820==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640820==    by 0x405480: main (d_test.cpp:49)
+==1640820== 
+[31m24.KO [32m25.OK ==1640822== Conditional jump or move depends on uninitialised value(s)
+==1640822==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640822==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640822==    by 0x407D19: selector (ft_printf.c:27)
+==1640822==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640822==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640822==    by 0x4054DD: main (d_test.cpp:51)
+==1640822==  Uninitialised value was created by a heap allocation
+==1640822==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640822==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640822==    by 0x407D19: selector (ft_printf.c:27)
+==1640822==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640822==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640822==    by 0x4054DD: main (d_test.cpp:51)
+==1640822== 
+[31m26.KO ==1640823== Conditional jump or move depends on uninitialised value(s)
+==1640823==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640823==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640823==    by 0x407D19: selector (ft_printf.c:27)
+==1640823==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640823==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640823==    by 0x40550B: main (d_test.cpp:52)
+==1640823==  Uninitialised value was created by a heap allocation
+==1640823==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640823==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640823==    by 0x407D19: selector (ft_printf.c:27)
+==1640823==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640823==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640823==    by 0x40550B: main (d_test.cpp:52)
+==1640823== 
+[31m27.KO ==1640824== Conditional jump or move depends on uninitialised value(s)
+==1640824==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640824==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640824==    by 0x407D19: selector (ft_printf.c:27)
+==1640824==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640824==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640824==    by 0x40553C: main (d_test.cpp:53)
+==1640824==  Uninitialised value was created by a heap allocation
+==1640824==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640824==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640824==    by 0x407D19: selector (ft_printf.c:27)
+==1640824==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640824==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640824==    by 0x40553C: main (d_test.cpp:53)
+==1640824== 
+[31m28.KO ==1640825== Conditional jump or move depends on uninitialised value(s)
+==1640825==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640825==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640825==    by 0x407D19: selector (ft_printf.c:27)
+==1640825==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640825==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640825==    by 0x405599: main (d_test.cpp:54)
+==1640825==  Uninitialised value was created by a heap allocation
+==1640825==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640825==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640825==    by 0x407D19: selector (ft_printf.c:27)
+==1640825==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640825==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640825==    by 0x405599: main (d_test.cpp:54)
+==1640825== 
+[31m29.KO [0m
+[93mcategory: i[0m
+[32m1.OK ==1640835== Conditional jump or move depends on uninitialised value(s)
+==1640835==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640835==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640835==    by 0x407D19: selector (ft_printf.c:27)
+==1640835==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640835==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640835==    by 0x4050B3: main (i_test.cpp:27)
+==1640835==  Uninitialised value was created by a heap allocation
+==1640835==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640835==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640835==    by 0x407D19: selector (ft_printf.c:27)
+==1640835==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640835==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640835==    by 0x4050B3: main (i_test.cpp:27)
+==1640835== 
+[31m2.KO [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [32m11.OK [32m12.OK ==1640846== Conditional jump or move depends on uninitialised value(s)
+==1640846==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640846==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640846==    by 0x407D19: selector (ft_printf.c:27)
+==1640846==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640846==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640846==    by 0x405297: main (i_test.cpp:38)
+==1640846==  Uninitialised value was created by a heap allocation
+==1640846==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640846==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640846==    by 0x407D19: selector (ft_printf.c:27)
+==1640846==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640846==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640846==    by 0x405297: main (i_test.cpp:38)
+==1640846== 
+[31m13.KO ==1640848== Conditional jump or move depends on uninitialised value(s)
+==1640848==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640848==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640848==    by 0x407D19: selector (ft_printf.c:27)
+==1640848==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640848==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640848==    by 0x4052C3: main (i_test.cpp:39)
+==1640848==  Uninitialised value was created by a heap allocation
+==1640848==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640848==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640848==    by 0x407D19: selector (ft_printf.c:27)
+==1640848==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640848==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640848==    by 0x4052C3: main (i_test.cpp:39)
+==1640848== 
+[31m14.KO ==1640849== Conditional jump or move depends on uninitialised value(s)
+==1640849==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640849==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640849==    by 0x407D19: selector (ft_printf.c:27)
+==1640849==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640849==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640849==    by 0x4052EF: main (i_test.cpp:40)
+==1640849==  Uninitialised value was created by a heap allocation
+==1640849==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640849==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640849==    by 0x407D19: selector (ft_printf.c:27)
+==1640849==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640849==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640849==    by 0x4052EF: main (i_test.cpp:40)
+==1640849== 
+[31m15.KO ==1640851== Conditional jump or move depends on uninitialised value(s)
+==1640851==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640851==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640851==    by 0x407D19: selector (ft_printf.c:27)
+==1640851==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640851==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640851==    by 0x40531B: main (i_test.cpp:41)
+==1640851==  Uninitialised value was created by a heap allocation
+==1640851==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640851==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640851==    by 0x407D19: selector (ft_printf.c:27)
+==1640851==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640851==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640851==    by 0x40531B: main (i_test.cpp:41)
+==1640851== 
+[31m16.KO ==1640852== Conditional jump or move depends on uninitialised value(s)
+==1640852==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640852==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640852==    by 0x407D19: selector (ft_printf.c:27)
+==1640852==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640852==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640852==    by 0x405347: main (i_test.cpp:42)
+==1640852==  Uninitialised value was created by a heap allocation
+==1640852==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640852==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640852==    by 0x407D19: selector (ft_printf.c:27)
+==1640852==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640852==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640852==    by 0x405347: main (i_test.cpp:42)
+==1640852== 
+[31m17.KO ==1640853== Conditional jump or move depends on uninitialised value(s)
+==1640853==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640853==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640853==    by 0x407D19: selector (ft_printf.c:27)
+==1640853==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640853==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640853==    by 0x405373: main (i_test.cpp:43)
+==1640853==  Uninitialised value was created by a heap allocation
+==1640853==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640853==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640853==    by 0x407D19: selector (ft_printf.c:27)
+==1640853==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640853==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640853==    by 0x405373: main (i_test.cpp:43)
+==1640853== 
+[31m18.KO ==1640854== Conditional jump or move depends on uninitialised value(s)
+==1640854==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640854==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640854==    by 0x407D19: selector (ft_printf.c:27)
+==1640854==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640854==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640854==    by 0x40539F: main (i_test.cpp:44)
+==1640854==  Uninitialised value was created by a heap allocation
+==1640854==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640854==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640854==    by 0x407D19: selector (ft_printf.c:27)
+==1640854==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640854==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640854==    by 0x40539F: main (i_test.cpp:44)
+==1640854== 
+[31m19.KO ==1640855== Conditional jump or move depends on uninitialised value(s)
+==1640855==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640855==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640855==    by 0x407D19: selector (ft_printf.c:27)
+==1640855==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640855==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640855==    by 0x4053CB: main (i_test.cpp:45)
+==1640855==  Uninitialised value was created by a heap allocation
+==1640855==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640855==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640855==    by 0x407D19: selector (ft_printf.c:27)
+==1640855==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640855==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640855==    by 0x4053CB: main (i_test.cpp:45)
+==1640855== 
+[31m20.KO ==1640856== Conditional jump or move depends on uninitialised value(s)
+==1640856==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640856==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640856==    by 0x407D19: selector (ft_printf.c:27)
+==1640856==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640856==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640856==    by 0x4053F7: main (i_test.cpp:46)
+==1640856==  Uninitialised value was created by a heap allocation
+==1640856==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640856==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640856==    by 0x407D19: selector (ft_printf.c:27)
+==1640856==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640856==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640856==    by 0x4053F7: main (i_test.cpp:46)
+==1640856== 
+[31m21.KO [32m22.OK ==1640858== Conditional jump or move depends on uninitialised value(s)
+==1640858==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640858==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640858==    by 0x407D19: selector (ft_printf.c:27)
+==1640858==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640858==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640858==    by 0x40544F: main (i_test.cpp:48)
+==1640858==  Uninitialised value was created by a heap allocation
+==1640858==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640858==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640858==    by 0x407D19: selector (ft_printf.c:27)
+==1640858==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640858==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640858==    by 0x40544F: main (i_test.cpp:48)
+==1640858== 
+[31m23.KO ==1640859== Conditional jump or move depends on uninitialised value(s)
+==1640859==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640859==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640859==    by 0x407D19: selector (ft_printf.c:27)
+==1640859==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640859==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640859==    by 0x405480: main (i_test.cpp:49)
+==1640859==  Uninitialised value was created by a heap allocation
+==1640859==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640859==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640859==    by 0x407D19: selector (ft_printf.c:27)
+==1640859==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640859==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640859==    by 0x405480: main (i_test.cpp:49)
+==1640859== 
+[31m24.KO [32m25.OK ==1640861== Conditional jump or move depends on uninitialised value(s)
+==1640861==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640861==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640861==    by 0x407D19: selector (ft_printf.c:27)
+==1640861==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640861==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640861==    by 0x4054DD: main (i_test.cpp:51)
+==1640861==  Uninitialised value was created by a heap allocation
+==1640861==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640861==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640861==    by 0x407D19: selector (ft_printf.c:27)
+==1640861==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640861==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640861==    by 0x4054DD: main (i_test.cpp:51)
+==1640861== 
+[31m26.KO ==1640862== Conditional jump or move depends on uninitialised value(s)
+==1640862==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640862==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640862==    by 0x407D19: selector (ft_printf.c:27)
+==1640862==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640862==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640862==    by 0x40550B: main (i_test.cpp:52)
+==1640862==  Uninitialised value was created by a heap allocation
+==1640862==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640862==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640862==    by 0x407D19: selector (ft_printf.c:27)
+==1640862==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640862==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640862==    by 0x40550B: main (i_test.cpp:52)
+==1640862== 
+[31m27.KO ==1640863== Conditional jump or move depends on uninitialised value(s)
+==1640863==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640863==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640863==    by 0x407D19: selector (ft_printf.c:27)
+==1640863==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640863==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640863==    by 0x40553C: main (i_test.cpp:53)
+==1640863==  Uninitialised value was created by a heap allocation
+==1640863==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640863==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640863==    by 0x407D19: selector (ft_printf.c:27)
+==1640863==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640863==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640863==    by 0x40553C: main (i_test.cpp:53)
+==1640863== 
+[31m28.KO ==1640864== Conditional jump or move depends on uninitialised value(s)
+==1640864==    at 0x408499: ft_print_str (ft_print_str.c:22)
+==1640864==    by 0x4088AA: ft_print_dec (ft_print_dec.c:27)
+==1640864==    by 0x407D19: selector (ft_printf.c:27)
+==1640864==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640864==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640864==    by 0x405599: main (i_test.cpp:54)
+==1640864==  Uninitialised value was created by a heap allocation
+==1640864==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640864==    by 0x40887A: ft_print_dec (ft_print_dec.c:23)
+==1640864==    by 0x407D19: selector (ft_printf.c:27)
+==1640864==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640864==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640864==    by 0x405599: main (i_test.cpp:54)
+==1640864== 
+[31m29.KO [0m
+[93mcategory: u[0m
+[32m1.OK ==1640879== Invalid write of size 1
+==1640879==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640879==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640879==    by 0x407F0B: selector (ft_printf.c:35)
+==1640879==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640879==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640879==    by 0x4050B3: main (u_test.cpp:27)
+==1640879==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640879==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640879==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640879==    by 0x407F0B: selector (ft_printf.c:35)
+==1640879==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640879==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640879==    by 0x4050B3: main (u_test.cpp:27)
+==1640879== 
+[31m2.KO [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [32m11.OK [32m12.OK ==1640890== Invalid write of size 1
+==1640890==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640890==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640890==    by 0x407F0B: selector (ft_printf.c:35)
+==1640890==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640890==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640890==    by 0x405297: main (u_test.cpp:38)
+==1640890==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640890==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640890==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640890==    by 0x407F0B: selector (ft_printf.c:35)
+==1640890==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640890==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640890==    by 0x405297: main (u_test.cpp:38)
+==1640890== 
+[31m13.KO ==1640891== Invalid write of size 1
+==1640891==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640891==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640891==    by 0x407F0B: selector (ft_printf.c:35)
+==1640891==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640891==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640891==    by 0x4052C3: main (u_test.cpp:39)
+==1640891==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640891==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640891==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640891==    by 0x407F0B: selector (ft_printf.c:35)
+==1640891==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640891==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640891==    by 0x4052C3: main (u_test.cpp:39)
+==1640891== 
+[31m14.KO ==1640892== Invalid write of size 1
+==1640892==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640892==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640892==    by 0x407F0B: selector (ft_printf.c:35)
+==1640892==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640892==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640892==    by 0x4052EF: main (u_test.cpp:40)
+==1640892==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640892==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640892==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640892==    by 0x407F0B: selector (ft_printf.c:35)
+==1640892==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640892==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640892==    by 0x4052EF: main (u_test.cpp:40)
+==1640892== 
+[31m15.KO ==1640893== Invalid write of size 1
+==1640893==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640893==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640893==    by 0x407F0B: selector (ft_printf.c:35)
+==1640893==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640893==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640893==    by 0x40531B: main (u_test.cpp:41)
+==1640893==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640893==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640893==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640893==    by 0x407F0B: selector (ft_printf.c:35)
+==1640893==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640893==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640893==    by 0x40531B: main (u_test.cpp:41)
+==1640893== 
+[31m16.KO ==1640894== Invalid write of size 1
+==1640894==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640894==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640894==    by 0x407F0B: selector (ft_printf.c:35)
+==1640894==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640894==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640894==    by 0x405347: main (u_test.cpp:42)
+==1640894==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640894==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640894==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640894==    by 0x407F0B: selector (ft_printf.c:35)
+==1640894==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640894==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640894==    by 0x405347: main (u_test.cpp:42)
+==1640894== 
+[31m17.KO ==1640895== Invalid write of size 1
+==1640895==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640895==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640895==    by 0x407F0B: selector (ft_printf.c:35)
+==1640895==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640895==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640895==    by 0x405373: main (u_test.cpp:43)
+==1640895==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640895==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640895==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640895==    by 0x407F0B: selector (ft_printf.c:35)
+==1640895==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640895==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640895==    by 0x405373: main (u_test.cpp:43)
+==1640895== 
+[31m18.KO ==1640896== Invalid write of size 1
+==1640896==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640896==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640896==    by 0x407F0B: selector (ft_printf.c:35)
+==1640896==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640896==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640896==    by 0x40539F: main (u_test.cpp:44)
+==1640896==  Address 0x4de70bf is 1 bytes before a block of size 3 alloc'd
+==1640896==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640896==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640896==    by 0x407F0B: selector (ft_printf.c:35)
+==1640896==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640896==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640896==    by 0x40539F: main (u_test.cpp:44)
+==1640896== 
+[31m19.KO ==1640898== Invalid write of size 1
+==1640898==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640898==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640898==    by 0x407F0B: selector (ft_printf.c:35)
+==1640898==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640898==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640898==    by 0x4053CB: main (u_test.cpp:45)
+==1640898==  Address 0x4de70bf is 1 bytes before a block of size 4 alloc'd
+==1640898==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640898==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640898==    by 0x407F0B: selector (ft_printf.c:35)
+==1640898==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640898==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640898==    by 0x4053CB: main (u_test.cpp:45)
+==1640898== 
+[31m20.KO ==1640899== Invalid write of size 1
+==1640899==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640899==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640899==    by 0x407F0B: selector (ft_printf.c:35)
+==1640899==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640899==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640899==    by 0x4053F7: main (u_test.cpp:46)
+==1640899==  Address 0x4de70bf is 1 bytes before a block of size 4 alloc'd
+==1640899==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640899==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640899==    by 0x407F0B: selector (ft_printf.c:35)
+==1640899==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640899==    by 0x4058A4: void print<int>(char const*, int) (print.hpp:66)
+==1640899==    by 0x4053F7: main (u_test.cpp:46)
+==1640899== 
+[31m21.KO [32m22.OK [32m23.OK ==1640902== Invalid write of size 1
+==1640902==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640902==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640902==    by 0x407F0B: selector (ft_printf.c:35)
+==1640902==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640902==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640902==    by 0x405480: main (u_test.cpp:49)
+==1640902==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640902==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640902==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640902==    by 0x407F0B: selector (ft_printf.c:35)
+==1640902==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640902==    by 0x405EE7: void print<long>(char const*, long) (print.hpp:66)
+==1640902==    by 0x405480: main (u_test.cpp:49)
+==1640902== 
+[31m24.KO [32m25.OK ==1640908== Invalid write of size 1
+==1640908==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640908==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640908==    by 0x407F0B: selector (ft_printf.c:35)
+==1640908==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640908==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640908==    by 0x4054DD: main (u_test.cpp:51)
+==1640908==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640908==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640908==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640908==    by 0x407F0B: selector (ft_printf.c:35)
+==1640908==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640908==    by 0x406524: void print<unsigned int>(char const*, unsigned int) (print.hpp:66)
+==1640908==    by 0x4054DD: main (u_test.cpp:51)
+==1640908== 
+[31m26.KO ==1640909== Invalid write of size 1
+==1640909==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640909==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640909==    by 0x407F0B: selector (ft_printf.c:35)
+==1640909==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640909==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640909==    by 0x40550B: main (u_test.cpp:52)
+==1640909==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640909==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640909==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640909==    by 0x407F0B: selector (ft_printf.c:35)
+==1640909==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640909==    by 0x406B67: void print<unsigned long>(char const*, unsigned long) (print.hpp:66)
+==1640909==    by 0x40550B: main (u_test.cpp:52)
+==1640909== 
+[31m27.KO ==1640910== Invalid write of size 1
+==1640910==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640910==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640910==    by 0x407F0B: selector (ft_printf.c:35)
+==1640910==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640910==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640910==    by 0x40553C: main (u_test.cpp:53)
+==1640910==  Address 0x4de70bf is 1 bytes before a block of size 2 alloc'd
+==1640910==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640910==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640910==    by 0x407F0B: selector (ft_printf.c:35)
+==1640910==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640910==    by 0x4071A7: void print<long long>(char const*, long long) (print.hpp:66)
+==1640910==    by 0x40553C: main (u_test.cpp:53)
+==1640910== 
+[31m28.KO ==1640915== Invalid write of size 1
+==1640915==    at 0x40865A: ft_uitoa (ft_uitoa.c:45)
+==1640915==    by 0x408513: ft_print_unsigned (ft_print_unsigned.c:23)
+==1640915==    by 0x407F0B: selector (ft_printf.c:35)
+==1640915==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640915==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640915==    by 0x405599: main (u_test.cpp:54)
+==1640915==  Address 0x4de715f is 1 bytes before a block of size 2 alloc'd
+==1640915==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1640915==    by 0x4084F7: ft_print_unsigned (ft_print_unsigned.c:21)
+==1640915==    by 0x407F0B: selector (ft_printf.c:35)
+==1640915==    by 0x4080DF: ft_printf (ft_printf.c:53)
+==1640915==    by 0x407835: void print<int, int, long, long, unsigned long, int, int>(char const*, int, int, long, long, unsigned long, int, int) (print.hpp:66)
+==1640915==    by 0x405599: main (u_test.cpp:54)
+==1640915== 
+[31m29.KO [0m
+[93mcategory: x[0m
+[32m1.OK [31m2.KO [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [32m11.OK [32m12.OK [31m13.KO [31m14.KO [31m15.KO [31m16.KO [31m17.KO [31m18.KO [31m19.KO [31m20.KO [31m21.KO [32m22.OK [31m23.KO [31m24.KO [32m25.OK [31m26.KO [31m27.KO [31m28.KO [31m29.KO [32m30.OK [31m31.KO [0m
+[93mcategory: X[0m
+[32m1.OK [31m2.KO [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [32m8.OK [32m9.OK [32m10.OK [32m11.OK [32m12.OK [31m13.KO [31m14.KO [31m15.KO [31m16.KO [31m17.KO [31m18.KO [31m19.KO [31m20.KO [31m21.KO [32m22.OK [31m23.KO [31m24.KO [32m25.OK [31m26.KO [31m27.KO [31m28.KO [31m29.KO [32m30.OK [31m31.KO [0m
+[93mcategory: %[0m
+[32m1.OK [32m2.OK [32m3.OK [32m4.OK [32m5.OK [32m6.OK [32m7.OK [0m
+[93mcategory: mix[0m
+==1641035== Conditional jump or move depends on uninitialised value(s)
+==1641035==    at 0x406339: ft_print_str (ft_print_str.c:22)
+==1641035==    by 0x40674A: ft_print_dec (ft_print_dec.c:27)
+==1641035==    by 0x405BB9: selector (ft_printf.c:27)
+==1641035==    by 0x405F7F: ft_printf (ft_printf.c:53)
+==1641035==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1641035==    by 0x40513D: main (mix_test.cpp:26)
+==1641035==  Uninitialised value was created by a heap allocation
+==1641035==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1641035==    by 0x40671A: ft_print_dec (ft_print_dec.c:23)
+==1641035==    by 0x405BB9: selector (ft_printf.c:27)
+==1641035==    by 0x405F7F: ft_printf (ft_printf.c:53)
+==1641035==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1641035==    by 0x40513D: main (mix_test.cpp:26)
+==1641035== 
+==1641035== Invalid write of size 1
+==1641035==    at 0x4064FA: ft_uitoa (ft_uitoa.c:45)
+==1641035==    by 0x4063B3: ft_print_unsigned (ft_print_unsigned.c:23)
+==1641035==    by 0x405DAB: selector (ft_printf.c:35)
+==1641035==    by 0x405F7F: ft_printf (ft_printf.c:53)
+==1641035==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1641035==    by 0x40513D: main (mix_test.cpp:26)
+==1641035==  Address 0x4de72ef is 1 bytes before a block of size 3 alloc'd
+==1641035==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1641035==    by 0x406397: ft_print_unsigned (ft_print_unsigned.c:21)
+==1641035==    by 0x405DAB: selector (ft_printf.c:35)
+==1641035==    by 0x405F7F: ft_printf (ft_printf.c:53)
+==1641035==    by 0x4056D7: void print<char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int>(char const*, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, char, char const*, int, int, int, int, int, int) (print.hpp:66)
+==1641035==    by 0x40513D: main (mix_test.cpp:26)
+==1641035== 
+[31m1.KO [0m
+
+⠋ Processing output⠙ Processing outputErrors found:
+For /home/ranavarr/francinette/tests/printf/printfTester/tests/p_test.cpp:
+25:     TEST(1, print(" %p ", -1));
+26:     TEST(2, print(" %p ", 1));
+27:     TEST(3, print(" %p ", 15));
+28:     TEST(4, print(" %p ", 16));
+29:     TEST(5, print(" %p ", 17));
+30:     TEST(6, print(" %p %p ", LONG_MIN, LONG_MAX));
+31:     TEST(7, print(" %p %p ", INT_MIN, INT_MAX));
+32:     TEST(8, print(" %p %p ", ULONG_MAX, -ULONG_MAX));
+33:     TEST(9, print(" %p %p ", 0, 0));
+
+For /home/ranavarr/francinette/tests/printf/printfTester/tests/d_test.cpp:
+26:     TEST(2, print(" %d ", -1));
+37:     TEST(13, print(" %d ", -9));
+38:     TEST(14, print(" %d ", -10));
+39:     TEST(15, print(" %d ", -11));
+40:     TEST(16, print(" %d ", -14));
+41:     TEST(17, print(" %d ", -15));
+42:     TEST(18, print(" %d ", -16));
+43:     TEST(19, print(" %d ", -99));
+...
+
+File too large. To see full report open: 
+/home/ranavarr/francinette/temp/printf/printfTester/errors.log
+
+⠋ Compiling tests: fsoares (my own tests)⠙ Compiling tests: fsoares (my own tests)⠹ Compiling tests: fsoares (my own tests)⠸ Compiling tests: fsoares (my own tests)⠼ Compiling tests: fsoares (my own tests)⠴ Compiling tests: fsoares (my own tests)⠦ Compiling tests: fsoares (my own tests)⠧ Compiling tests: fsoares (my own tests)⠇ Compiling tests: fsoares (my own tests)⠏ Compiling tests: fsoares (my own tests)⠋ Compiling tests: fsoares (my own tests)ℹ Running tests: fsoares (my own tests)
+Want some more thorough tests? run 'francinette --strict'.
+
+Summary: no bonus
+
+Norminette Errors: ft_itoa.c, main.c
+
+Failed tests: printfTester
+

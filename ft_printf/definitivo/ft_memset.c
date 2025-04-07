@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ranavarr <ranavarr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/22 16:44:32 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/03/22 16:47:28 by ranavarr         ###   ########.fr       */
+/*   Created: 2024/12/27 00:00:12 by ranavarr          #+#    #+#             */
+/*   Updated: 2025/04/07 18:32:03 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	write(1, &c, 1);
-	return (1);
+	char			*str;
+	size_t			i;
+
+	i = 0;
+	str = (char *) s;
+	while (i < n)
+	{
+		str[i] = c;
+		i++;
+	}
+	return (s);
 }

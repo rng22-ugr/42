@@ -1,5 +1,5 @@
 NAME = libftprintf.a
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -g -Wall -Werror -Wextra
 AR = ar crs
 RM = rm -f
 SOURCES = \
@@ -13,6 +13,8 @@ SOURCES = \
 	ft_print_unsigned.c\
 	ft_putchar.c\
 	ft_uitoa.c\
+	ft_calloc.c\
+	ft_memset.c\
 
 
 
