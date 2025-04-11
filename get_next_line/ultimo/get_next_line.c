@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 20:20:15 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/11 17:58:26 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/11 20:29:27 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -26,15 +26,15 @@ char	*_get_line(int fd)
 	char	*tmp;
 	int		bytes;
 
-	bytes = 1;
 	line = NULL;
 	dump = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
-	if (!dump)
+	line = ft_calloc(sizeof(char), 1);
+	if (fd <= 0 || !dump || !line)
 		return (free(line), free(dump), NULL);
 	bytes = read(fd, dump, BUFFER_SIZE);
 	while (bytes > 0)
 	{
-		if (bytes < 0)
+		if (bytes < 0 || bytes > BUFFER_SIZE)
 			return (free (line), free(dump), NULL);
 		dump[bytes] = '\0';
 		tmp = ft_strjoin(line, dump);
@@ -94,12 +94,12 @@ char	*extract_line(char buffer[])
 	if (nlpos)
 	{
 		new_size = nlpos - buffer;
-		line = ft_calloc(sizeof(char), (new_size + 1));
+		line = ft_calloc(sizeof(char), (new_size + 2));
 		if (!line)
 			return (NULL);
-		line = ft_memmove(line, buffer, sizeof(char) * (new_size - 1));
-		ft_memmove(buffer, &buffer[new_size - 1],
-			sizeof(char) * (ft_strlen(&buffer[new_size])));
+		line = ft_memmove(line, buffer, (new_size + 1));
+		ft_memmove(buffer, &buffer[new_size + 1],
+			ft_strlen(&buffer[new_size]) + 1);
 	}
 	return (line);
 }
@@ -126,8 +126,8 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
-int	main(int argc, char **argv)
+/*
+int	main()
 {
 	char	*str;
 	int		fd;
@@ -145,3 +145,21 @@ int	main(int argc, char **argv)
 	close(fd);
 	return (0);
 }
+*/
+/*
+int	main(void)
+{
+	char	buffer [BUFFER_SIZE + 1] = "";	
+	char	*line;
+
+	line = extract_line(buffer);
+	printf("line = %s", line);
+	printf("buffer = %s", buffer);
+	line = extract_line(buffer);
+	printf("line = %s", line);
+	printf("buffer = %s", buffer);
+
+
+	return (0);
+}
+*/
