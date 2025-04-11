@@ -6,7 +6,7 @@
 /*   By: ranavarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 19:57:54 by ranavarr          #+#    #+#             */
-/*   Updated: 2025/04/11 06:28:10 by ranavarr         ###   ########.fr       */
+/*   Updated: 2025/04/11 17:55:11 by ranavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	res[j] = '\0';
 	return (res);
 }
-
+/*
 void	*ft_realloc(char **ptr, size_t old_size, size_t new_size)
 {
 	void	*new_array;
@@ -150,3 +150,4 @@ void	*ft_realloc(char **ptr, size_t old_size, size_t new_size)
 	free(ptr);
 	return (new_array);
 }
+*/
