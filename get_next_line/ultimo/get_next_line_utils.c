@@ -46,6 +46,8 @@ int	ft_strlen(const char *s)
 {
 	int	len;
 
+	if (s == NULL)
+		return (0);
 	len = 0;
 	while (s[len] != '\0')
 		len++;
@@ -114,7 +116,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-
+/*
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*res;
@@ -134,7 +136,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	res[j] = '\0';
 	return (res);
 }
-/*
+
 void	*ft_realloc(char **ptr, size_t old_size, size_t new_size)
 {
 	void	*new_array;
